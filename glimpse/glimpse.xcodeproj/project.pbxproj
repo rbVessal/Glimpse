@@ -14,14 +14,17 @@
 		3F32D7F0189B4C2300E109A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32D7EF189B4C2300E109A8 /* main.m */; };
 		3F32D7F4189B4C2300E109A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32D7F3189B4C2300E109A8 /* AppDelegate.m */; };
 		3F32D7F7189B4C2300E109A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F32D7F5189B4C2300E109A8 /* Main.storyboard */; };
-		3F32D7FA189B4C2300E109A8 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32D7F9189B4C2300E109A8 /* FirstViewController.m */; };
-		3F32D7FD189B4C2300E109A8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32D7FC189B4C2300E109A8 /* SecondViewController.m */; };
+		3F32D7FA189B4C2300E109A8 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32D7F9189B4C2300E109A8 /* ProfileViewController.m */; };
+		3F32D7FD189B4C2300E109A8 /* FinderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32D7FC189B4C2300E109A8 /* FinderViewController.m */; };
 		3F32D7FF189B4C2300E109A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F32D7FE189B4C2300E109A8 /* Images.xcassets */; };
 		3F32D806189B4C2300E109A8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F32D805189B4C2300E109A8 /* XCTest.framework */; };
 		3F32D807189B4C2300E109A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F32D7E3189B4C2200E109A8 /* Foundation.framework */; };
 		3F32D808189B4C2300E109A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F32D7E7189B4C2300E109A8 /* UIKit.framework */; };
 		3F32D810189B4C2300E109A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F32D80E189B4C2300E109A8 /* InfoPlist.strings */; };
 		3F32D812189B4C2300E109A8 /* glimpseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32D811189B4C2300E109A8 /* glimpseTests.m */; };
+		B3BFE229189BFC5D00695E82 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BFE227189BFC5D00695E82 /* AddressBook.framework */; };
+		B3BFE22A189BFC5D00695E82 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */; };
+		B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BFE22C189BFE0200695E82 /* AboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +49,20 @@
 		3F32D7F2189B4C2300E109A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3F32D7F3189B4C2300E109A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3F32D7F6189B4C2300E109A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3F32D7F8189B4C2300E109A8 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		3F32D7F9189B4C2300E109A8 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		3F32D7FB189B4C2300E109A8 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		3F32D7FC189B4C2300E109A8 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		3F32D7F8189B4C2300E109A8 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		3F32D7F9189B4C2300E109A8 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		3F32D7FB189B4C2300E109A8 /* FinderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderViewController.h; sourceTree = "<group>"; };
+		3F32D7FC189B4C2300E109A8 /* FinderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinderViewController.m; sourceTree = "<group>"; };
 		3F32D7FE189B4C2300E109A8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F32D804189B4C2300E109A8 /* glimpseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = glimpseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F32D805189B4C2300E109A8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3F32D80D189B4C2300E109A8 /* glimpseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "glimpseTests-Info.plist"; sourceTree = "<group>"; };
 		3F32D80F189B4C2300E109A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3F32D811189B4C2300E109A8 /* glimpseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = glimpseTests.m; sourceTree = "<group>"; };
+		B3BFE227189BFC5D00695E82 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		B3BFE22B189BFE0200695E82 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		B3BFE22C189BFE0200695E82 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3BFE229189BFC5D00695E82 /* AddressBook.framework in Frameworks */,
+				B3BFE22A189BFC5D00695E82 /* AddressBookUI.framework in Frameworks */,
 				3F32D7E6189B4C2300E109A8 /* CoreGraphics.framework in Frameworks */,
 				3F32D7E8189B4C2300E109A8 /* UIKit.framework in Frameworks */,
 				3F32D7E4189B4C2300E109A8 /* Foundation.framework in Frameworks */,
@@ -104,6 +113,8 @@
 		3F32D7E2189B4C2200E109A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3BFE227189BFC5D00695E82 /* AddressBook.framework */,
+				B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */,
 				3F32D7E3189B4C2200E109A8 /* Foundation.framework */,
 				3F32D7E5189B4C2300E109A8 /* CoreGraphics.framework */,
 				3F32D7E7189B4C2300E109A8 /* UIKit.framework */,
@@ -115,13 +126,15 @@
 		3F32D7E9189B4C2300E109A8 /* glimpse */ = {
 			isa = PBXGroup;
 			children = (
+				B3BFE22B189BFE0200695E82 /* AboutViewController.h */,
+				B3BFE22C189BFE0200695E82 /* AboutViewController.m */,
 				3F32D7F2189B4C2300E109A8 /* AppDelegate.h */,
 				3F32D7F3189B4C2300E109A8 /* AppDelegate.m */,
 				3F32D7F5189B4C2300E109A8 /* Main.storyboard */,
-				3F32D7F8189B4C2300E109A8 /* FirstViewController.h */,
-				3F32D7F9189B4C2300E109A8 /* FirstViewController.m */,
-				3F32D7FB189B4C2300E109A8 /* SecondViewController.h */,
-				3F32D7FC189B4C2300E109A8 /* SecondViewController.m */,
+				3F32D7F8189B4C2300E109A8 /* ProfileViewController.h */,
+				3F32D7F9189B4C2300E109A8 /* ProfileViewController.m */,
+				3F32D7FB189B4C2300E109A8 /* FinderViewController.h */,
+				3F32D7FC189B4C2300E109A8 /* FinderViewController.m */,
 				3F32D7FE189B4C2300E109A8 /* Images.xcassets */,
 				3F32D7EA189B4C2300E109A8 /* Supporting Files */,
 			);
@@ -254,9 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F32D7FD189B4C2300E109A8 /* SecondViewController.m in Sources */,
+				3F32D7FD189B4C2300E109A8 /* FinderViewController.m in Sources */,
+				B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */,
 				3F32D7F4189B4C2300E109A8 /* AppDelegate.m in Sources */,
-				3F32D7FA189B4C2300E109A8 /* FirstViewController.m in Sources */,
+				3F32D7FA189B4C2300E109A8 /* ProfileViewController.m in Sources */,
 				3F32D7F0189B4C2300E109A8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +480,7 @@
 				3F32D817189B4C2300E109A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F32D818189B4C2300E109A8 /* Build configuration list for PBXNativeTarget "glimpseTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +489,7 @@
 				3F32D81A189B4C2300E109A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

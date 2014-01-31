@@ -1,18 +1,18 @@
 //
-//  SecondViewController.m
+//  FirstViewController.m
 //  glimpse
 //
 //  Created by Student on 1/30/14.
 //  Copyright (c) 2014 Student. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "ProfileViewController.h"
 
-@interface SecondViewController ()
+@interface ProfileViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation ProfileViewController
 
 - (void)viewDidLoad
 {

@@ -1,23 +1,23 @@
 //
-//  FirstViewController.m
+//  AboutViewController.m
 //  glimpse
 //
-//  Created by Student on 1/30/14.
+//  Created by Rebecca Vessal on 1/31/14.
 //  Copyright (c) 2014 Student. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "AboutViewController.h"
 
-@interface FirstViewController ()
+@interface AboutViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation AboutViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

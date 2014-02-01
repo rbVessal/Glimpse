@@ -10,4 +10,15 @@
 
 @interface ProfileViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *ageTextField;
+@property (weak, nonatomic) IBOutlet UITextField *homeTownTextField;
+@property (weak, nonatomic) IBOutlet UITextField *currentTownTextField;
+@property (weak, nonatomic) IBOutlet UITextField *educationTextField;
+@property (weak, nonatomic) IBOutlet UITextField *workTextField;
+@property (weak, nonatomic) IBOutlet UITextField *hobbiesTextField;
+@property (weak, nonatomic) IBOutlet UITextField *contactTextField;
+
+-(IBAction)saveProfileInformation:(id)sender;
+
 @end

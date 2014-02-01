@@ -52,41 +52,39 @@
 {
     CFErrorRef error;
     ABRecordRef personContactToAdd = ABPersonCreate();
-    ABRecordSetValue(personContactToAdd, kABPersonFirstNameProperty, @"Rebecca", &error);
-    ABRecordSetValue(personContactToAdd, kABPersonLastNameProperty, @"Vessal", &error);
-    //ABRecordSetValue(personContactToAdd, kABPersonPhoneProperty, @"818-731-3166", &error);
+    
+    //Get the name and get the first and last name by separating the string by space
+    NSString *fullName = [[NSUserDefaults standardUserDefaults]objectForKey:@"Name"];
+    NSArray *nameComponents = [fullName componentsSeparatedByString:@" "];
+    NSString *firstName = [nameComponents objectAtIndex:0];
+    NSString *lastName = [nameComponents objectAtIndex:1];
+    ABRecordSetValue(personContactToAdd, kABPersonFirstNameProperty, (__bridge CFTypeRef)(firstName), &error);
+    ABRecordSetValue(personContactToAdd, kABPersonLastNameProperty, (__bridge CFTypeRef)(lastName), &error);
     //// Adding Phone details
     // create a new phone --------------------
     ABMutableMultiValueRef multiPhone = ABMultiValueCreateMutable(kABMultiStringPropertyType);
-    // set the main phone number
     ABMultiValueAddValueAndLabel(multiPhone, @"1-818-731-3166", kABPersonPhoneMainLabel, NULL);
-    // add phone details to person
     ABRecordSetValue(personContactToAdd, kABPersonPhoneProperty, multiPhone,nil);
     // release phone object
     CFRelease(multiPhone);
-    ABRecordSetValue(personContactToAdd, kABPersonJobTitleProperty, @"Cocoa Developer", &error);
+    
+    
+    ABRecordSetValue(personContactToAdd, kABPersonJobTitleProperty, (__bridge CFTypeRef)([[NSUserDefaults standardUserDefaults]objectForKey:@"Work"]), &error);
     //// Adding email details
     // create new email-ref
     ABMutableMultiValueRef multiEmail = ABMultiValueCreateMutable(kABMultiStringPropertyType);
-    // set the work mail
     ABMultiValueAddValueAndLabel(multiEmail, @"rebeccaVessal@gmail.com", kABWorkLabel, NULL);
-    // add the mail to person
     ABRecordSetValue(personContactToAdd, kABPersonEmailProperty, multiEmail, NULL);
     // release mail object
     CFRelease(multiEmail);
     //// adding address details
     // create address object
+    NSString *currentTown = [[NSUserDefaults standardUserDefaults]objectForKey:@"CurrentTown"];
+    NSArray *currentTownComponents = [currentTown componentsSeparatedByString:@","];
     ABMutableMultiValueRef multiAddress = ABMultiValueCreateMutable(kABMultiDictionaryPropertyType);
-    // create a new dictionary
     NSMutableDictionary *addressDictionary = [[NSMutableDictionary alloc] init];
-    // set the address line to new dictionary object
-    [addressDictionary setObject:@"15937 Harvest St." forKey:(NSString *) kABPersonAddressStreetKey];
-    // set the city to new dictionary object
-    [addressDictionary setObject:@"Granada Hills" forKey:(NSString *)kABPersonAddressCityKey];
-    // set the state to new dictionary object
-    [addressDictionary setObject:@"California" forKey:(NSString *)kABPersonAddressStateKey];
-    // set the zip/pin to new dictionary object
-    [addressDictionary setObject:@"91344 " forKey:(NSString *)kABPersonAddressZIPKey];
+    [addressDictionary setObject:[currentTownComponents objectAtIndex:0] forKey:(NSString *)kABPersonAddressCityKey];
+    [addressDictionary setObject:[currentTownComponents objectAtIndex:1] forKey:(NSString *)kABPersonAddressStateKey];
     // retain the dictionary
     CFTypeRef ctr = CFBridgingRetain(addressDictionary);
     // copy all key-values from ctr to Address object
@@ -96,13 +94,15 @@
     // release address object
     CFRelease(multiAddress);
     
-    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-    [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
-    [formatter setDateFormat:@"dd.MM.yyyy"];
-    NSDate *bdate=[formatter dateFromString:@"06.12.1991"]; // 10.12 is your b'date.
-    //don't set year in address book (yyyy=1604)
-    ABRecordSetValue(personContactToAdd, kABPersonBirthdayProperty, (__bridge CFTypeRef)(bdate), &error);
-    ABRecordSetValue(personContactToAdd, kABPersonNoteProperty, @"Hobbies: Playing Video Games\n Education: Video Game Design & Development BS at Rochester Institute of Technology\n Work Experience: Apple SpriteKit Intern", &error);
+//    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+//    [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
+//    [formatter setDateFormat:@"dd.MM.yyyy"];
+//    NSDate *bdate=[formatter dateFromString:@"06.12.1991"]; // 10.12 is your b'date.
+//    //don't set year in address book (yyyy=1604)
+//    ABRecordSetValue(personContactToAdd, kABPersonBirthdayProperty, (__bridge CFTypeRef)(bdate), &error);
+    NSString *hobbies = [[NSUserDefaults standardUserDefaults]objectForKey:@"Hobbies"];
+    NSString *education = [[NSUserDefaults standardUserDefaults]objectForKey:@"Education"];
+    ABRecordSetValue(personContactToAdd, kABPersonNoteProperty, (__bridge CFTypeRef)([NSString stringWithFormat:@"Hobbies: %@\n Education: %@", hobbies, education]), &error);
     return personContactToAdd;
 
 }

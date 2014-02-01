@@ -12,9 +12,6 @@
 
 @interface FinderViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *jobTitleLabel;
-
 -(IBAction)showPicker:(id)sender;
 
 @end

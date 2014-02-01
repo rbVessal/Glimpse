@@ -22,6 +22,8 @@
 		3F32D808189B4C2300E109A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F32D7E7189B4C2300E109A8 /* UIKit.framework */; };
 		3F32D810189B4C2300E109A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F32D80E189B4C2300E109A8 /* InfoPlist.strings */; };
 		3F32D812189B4C2300E109A8 /* glimpseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32D811189B4C2300E109A8 /* glimpseTests.m */; };
+		3F36AEEE189CB63300DFFC3A /* about_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F36AEED189CB63300DFFC3A /* about_icon.png */; };
+		3F36AEF0189CB85700DFFC3A /* iconexample.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F36AEEF189CB85700DFFC3A /* iconexample.png */; };
 		B3BFE229189BFC5D00695E82 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BFE227189BFC5D00695E82 /* AddressBook.framework */; };
 		B3BFE22A189BFC5D00695E82 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */; };
 		B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BFE22C189BFE0200695E82 /* AboutViewController.m */; };
@@ -59,6 +61,8 @@
 		3F32D80D189B4C2300E109A8 /* glimpseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "glimpseTests-Info.plist"; sourceTree = "<group>"; };
 		3F32D80F189B4C2300E109A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3F32D811189B4C2300E109A8 /* glimpseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = glimpseTests.m; sourceTree = "<group>"; };
+		3F36AEED189CB63300DFFC3A /* about_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_icon.png; sourceTree = "<group>"; };
+		3F36AEEF189CB85700DFFC3A /* iconexample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconexample.png; sourceTree = "<group>"; };
 		B3BFE227189BFC5D00695E82 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		B3BFE22B189BFE0200695E82 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 		3F32D7EA189B4C2300E109A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3F36AEEF189CB85700DFFC3A /* iconexample.png */,
+				3F36AEED189CB63300DFFC3A /* about_icon.png */,
 				3F32D7EB189B4C2300E109A8 /* glimpse-Info.plist */,
 				3F32D7EC189B4C2300E109A8 /* InfoPlist.strings */,
 				3F32D7EF189B4C2300E109A8 /* main.m */,
@@ -246,9 +252,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F36AEEE189CB63300DFFC3A /* about_icon.png in Resources */,
 				3F32D7FF189B4C2300E109A8 /* Images.xcassets in Resources */,
 				3F32D7EE189B4C2300E109A8 /* InfoPlist.strings in Resources */,
 				3F32D7F7189B4C2300E109A8 /* Main.storyboard in Resources */,
+				3F36AEF0189CB85700DFFC3A /* iconexample.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

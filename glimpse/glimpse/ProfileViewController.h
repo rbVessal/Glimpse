@@ -10,6 +10,7 @@
 
 @interface ProfileViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *ageTextField;
 @property (weak, nonatomic) IBOutlet UITextField *homeTownTextField;

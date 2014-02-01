@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AddressBookUI/AddressBookUI.h>
+#import <AddressBook/AddressBook.h>
 
 @interface FinderViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
 

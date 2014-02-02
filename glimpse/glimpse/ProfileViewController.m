@@ -9,6 +9,10 @@
 #import "ProfileViewController.h"
 
 @interface ProfileViewController ()
+{
+    CGSize _keyboardSize;
+    CGPoint _keyboardOrigin;
+}
 
 @end
 
@@ -18,8 +22,40 @@
 {
     [super viewDidLoad];
     [self.scrollview setContentSize:CGSizeMake(340, 800)];
-	// Do any additional setup after loading the view, typically from a nib.
+    //Set the textfield delegates
+    self.nameTextField.delegate = self;
+    self.ageTextField.delegate = self;
+    self.educationTextField.delegate = self;
+    self.homeTownTextField.delegate = self;
+    self.currentTownTextField.delegate = self;
+    self.workTextField.delegate = self;
+    self.hobbiesTextField.delegate = self;
+    
+    
 }
+
+// Called when the UIKeyboardDidShowNotification is sent.
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    _keyboardSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    _keyboardOrigin = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].origin;
+   
+}
+
+#pragma mark - TextField delegate protocol methods
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+
+{
+    //Move the scrollview so that the textfields are visible
+    const float movementDuration = 0.3f; // tweak as needed
+    [UIView beginAnimations: @"anim" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    self.scrollview.contentOffset = CGPointMake(0.0, textField.frame.origin.y/2 + textField.frame.size.height );
+    [UIView commitAnimations];
+}
+
 
 -(IBAction)saveProfileInformation:(id)sender
 {

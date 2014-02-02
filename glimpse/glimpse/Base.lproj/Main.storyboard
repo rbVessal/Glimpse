@@ -165,7 +165,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="u1e-5L-l1D"/>
                     <connections>
+                        <outlet property="ageTextField" destination="u6V-us-JTA" id="t0F-cD-BB3"/>
+                        <outlet property="currentTownTextField" destination="JoL-Od-qyl" id="BZf-wg-Do5"/>
+                        <outlet property="educationTextField" destination="VlR-Bm-qiV" id="AdF-r9-75c"/>
+                        <outlet property="hobbiesTextField" destination="3Wc-Iy-bku" id="6wg-Gw-rd2"/>
+                        <outlet property="homeTownTextField" destination="pN3-ZV-X8A" id="Cjp-wd-rhK"/>
+                        <outlet property="nameTextField" destination="abE-Ds-F5g" id="Atr-oP-l0C"/>
                         <outlet property="scrollview" destination="SWq-qT-h3C" id="lpM-k8-n2t"/>
+                        <outlet property="workTextField" destination="jRq-3A-JSb" id="4ed-xz-nCt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>

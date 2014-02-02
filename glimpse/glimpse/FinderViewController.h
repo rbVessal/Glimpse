@@ -12,6 +12,6 @@
 
 @interface FinderViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
 
--(IBAction)showPicker:(id)sender;
+-(IBAction)getPersonContact:(id)sender;
 
 @end

@@ -181,11 +181,11 @@
                         <outlet property="ageTextField" destination="u6V-us-JTA" id="t0F-cD-BB3"/>
                         <outlet property="currentTownTextField" destination="JoL-Od-qyl" id="BZf-wg-Do5"/>
                         <outlet property="educationTextField" destination="VlR-Bm-qiV" id="AdF-r9-75c"/>
-                        <outlet property="emailTextField" destination="eJE-3B-Bw2" id="SSz-wW-osJ"/>
+                        <outlet property="emailTextField" destination="gHj-hV-e3t" id="p9j-vu-GIt"/>
                         <outlet property="hobbiesTextField" destination="3Wc-Iy-bku" id="6wg-Gw-rd2"/>
                         <outlet property="homeTownTextField" destination="pN3-ZV-X8A" id="Cjp-wd-rhK"/>
                         <outlet property="nameTextField" destination="abE-Ds-F5g" id="Atr-oP-l0C"/>
-                        <outlet property="phoneNumberTextField" destination="gHj-hV-e3t" id="sBt-6G-KVu"/>
+                        <outlet property="phoneNumberTextField" destination="eJE-3B-Bw2" id="64A-kH-H2p"/>
                         <outlet property="scrollview" destination="SWq-qT-h3C" id="lpM-k8-n2t"/>
                         <outlet property="workTextField" destination="jRq-3A-JSb" id="4ed-xz-nCt"/>
                     </connections>
@@ -319,7 +319,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="showPicker:" destination="QUy-BD-bpt" eventType="touchUpInside" id="ZHk-Yp-mLo"/>
+                                    <action selector="getPersonContact:" destination="QUy-BD-bpt" eventType="touchUpInside" id="aco-Iq-eNc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rNe-iX-XlO">
@@ -340,10 +340,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="Z7h-1E-pvt"/>
-                    <connections>
-                        <outlet property="jobTitleLabel" destination="SPn-BP-YiT" id="jKy-pP-Xdw"/>
-                        <outlet property="nameLabel" destination="rNe-iX-XlO" id="aGC-fy-Ccu"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>

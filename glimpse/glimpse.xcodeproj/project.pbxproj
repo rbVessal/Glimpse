@@ -44,6 +44,7 @@
 		B3DB2C25189E4F750051E341 /* ContactGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DB2C24189E4F750051E341 /* ContactGrabber.m */; };
 		B3DFD08E189EA91A0019DAED /* FaceDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFD08D189EA91A0019DAED /* FaceDetector.m */; };
 		B3DFD090189EC0340019DAED /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFD08F189EC0340019DAED /* border.png */; };
+		B3DFD095189F00180019DAED /* TutorialContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFD094189F00180019DAED /* TutorialContentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		B3DFD08C189EA91A0019DAED /* FaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetector.h; sourceTree = "<group>"; };
 		B3DFD08D189EA91A0019DAED /* FaceDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetector.m; sourceTree = "<group>"; };
 		B3DFD08F189EC0340019DAED /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
+		B3DFD093189F00180019DAED /* TutorialContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialContentViewController.h; sourceTree = "<group>"; };
+		B3DFD094189F00180019DAED /* TutorialContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialContentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,13 +247,15 @@
 				3FE1CF33189DB0B700E8F55B /* TutorialViewController.h */,
 				3FE1CF34189DB0B700E8F55B /* TutorialViewController.m */,
 				3FE1CF30189DA1B400E8F55B /* ImagePickerViewController.h */,
-				3FE1CF31189DA1B400E8F55B /* ImagePickerViewController.m */,
 				3F087C52189E4B4700A77BCF /* FacialViewController.h */,
 				3F087C53189E4B4700A77BCF /* FacialViewController.m */,
+				3FE1CF31189DA1B400E8F55B /* ImagePickerViewController.m */,
 				3F32D7F8189B4C2300E109A8 /* ProfileViewController.h */,
 				3F32D7F9189B4C2300E109A8 /* ProfileViewController.m */,
 				3F32D7FB189B4C2300E109A8 /* FinderViewController.h */,
 				3F32D7FC189B4C2300E109A8 /* FinderViewController.m */,
+				B3DFD093189F00180019DAED /* TutorialContentViewController.h */,
+				B3DFD094189F00180019DAED /* TutorialContentViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */,
 				3F32D7F4189B4C2300E109A8 /* AppDelegate.m in Sources */,
 				3F32D7FA189B4C2300E109A8 /* ProfileViewController.m in Sources */,
+				B3DFD095189F00180019DAED /* TutorialContentViewController.m in Sources */,
 				3FE1CF32189DA1B400E8F55B /* ImagePickerViewController.m in Sources */,
 				3F32D7F0189B4C2300E109A8 /* main.m in Sources */,
 			);

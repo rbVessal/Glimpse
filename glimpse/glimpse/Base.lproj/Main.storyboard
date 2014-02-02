@@ -404,6 +404,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="swr-aa-ePb"/>
+                    <connections>
+                        <outlet property="view" destination="BUl-ZK-Iqv" id="jzO-P9-aIc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBD-8o-DQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

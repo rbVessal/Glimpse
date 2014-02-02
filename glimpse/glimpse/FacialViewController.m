@@ -11,6 +11,7 @@
 @interface FacialViewController ()
 {
     ContactGrabber *_contractGrabber;
+    FaceDetector *_faceDetector;
 }
 @end
 
@@ -20,8 +21,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    //Create the contract grabber that will get the person's contact
     _contractGrabber = [[ContactGrabber alloc]init];
     _contractGrabber.delegate = self;
+    //Create the facedetector that enables the video tracking session
+    _faceDetector = [[FaceDetector alloc]init];
+    _faceDetector.previewView = self.view;
+    [_faceDetector setupVideoFaceDetection];
 }
 
 -(IBAction)getPersonContact:(id)sender
@@ -56,6 +62,13 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    //Remove the video session otherwise this will cause a huge memory leak and
+    //will crash
+    [_faceDetector teardownVideoFaceDetection];
 }
 
 - (void)didReceiveMemoryWarning

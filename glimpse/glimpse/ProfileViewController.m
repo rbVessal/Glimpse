@@ -165,6 +165,10 @@
     
     //Dismiss the keyboard
     [self dismissKeyboard];
+    
+    //Show confirmation of saved profile information
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Profile Saved" message:@"Your profile information was saved successfully." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

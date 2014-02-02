@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AddressBookUI/AddressBookUI.h>
-#import <AddressBook/AddressBook.h>
 
-@interface FinderViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
+@interface FinderViewController : UIViewController 
 {
     UIButton * finderButton;
 }
@@ -18,7 +16,6 @@
 - (IBAction)findPeople:(id)sender;
 @property (nonatomic, weak) IBOutlet UIButton * finderButton;
 
--(IBAction)getPersonContact:(id)sender;
 
 // Persons Data
 

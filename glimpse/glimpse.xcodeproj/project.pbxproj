@@ -40,6 +40,7 @@
 		B3BFE229189BFC5D00695E82 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BFE227189BFC5D00695E82 /* AddressBook.framework */; };
 		B3BFE22A189BFC5D00695E82 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */; };
 		B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BFE22C189BFE0200695E82 /* AboutViewController.m */; };
+		B3DB2C25189E4F750051E341 /* ContactGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DB2C24189E4F750051E341 /* ContactGrabber.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		B3BFE22B189BFE0200695E82 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		B3BFE22C189BFE0200695E82 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		B3DB2C23189E4F750051E341 /* ContactGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactGrabber.h; sourceTree = "<group>"; };
+		B3DB2C24189E4F750051E341 /* ContactGrabber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactGrabber.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,8 @@
 				3F32D7FC189B4C2300E109A8 /* FinderViewController.m */,
 				3F32D7FE189B4C2300E109A8 /* Images.xcassets */,
 				3F32D7EA189B4C2300E109A8 /* Supporting Files */,
+				B3DB2C23189E4F750051E341 /* ContactGrabber.h */,
+				B3DB2C24189E4F750051E341 /* ContactGrabber.m */,
 			);
 			path = glimpse;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 			files = (
 				3F087C54189E4B4700A77BCF /* FacialViewController.m in Sources */,
 				3FE1CF35189DB0B700E8F55B /* TutorialViewController.m in Sources */,
+				B3DB2C25189E4F750051E341 /* ContactGrabber.m in Sources */,
 				3F32D7FD189B4C2300E109A8 /* FinderViewController.m in Sources */,
 				B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */,
 				3F32D7F4189B4C2300E109A8 /* AppDelegate.m in Sources */,

@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
+#import "ContactGrabber.h"
 
-@interface FacialViewController : UIViewController
+@interface FacialViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate, ContactGrabberDelegate>
 
 @property (nonatomic, strong) NSString * personsImage;
 @property (nonatomic, strong) NSString * personsAge;
@@ -20,5 +23,8 @@
 @property (nonatomic, strong) NSString * personsHobbies;
 @property (nonatomic, strong) NSString * personsPhone;
 @property (nonatomic, strong) NSString * personsEmail;
+
+-(IBAction)getPersonContact:(id)sender;
+
 
 @end

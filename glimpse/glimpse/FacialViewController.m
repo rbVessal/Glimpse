@@ -9,8 +9,9 @@
 #import "FacialViewController.h"
 
 @interface FacialViewController ()
-
-
+{
+    ContactGrabber *_contractGrabber;
+}
 @end
 
 @implementation FacialViewController
@@ -19,6 +20,37 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    _contractGrabber = [[ContactGrabber alloc]init];
+    _contractGrabber.delegate = self;
+}
+
+-(IBAction)getPersonContact:(id)sender
+{
+    [_contractGrabber getPersonContact];
+}
+
+#pragma mark - ContactGrabber Protocol
+-(void)showContacts
+{
+    ABPeoplePickerNavigationController *contactsController = [[ABPeoplePickerNavigationController alloc] init];
+    contactsController.peoplePickerDelegate = self;
+    [self presentViewController:contactsController animated:YES completion:nil];
+}
+
+#pragma mark - ABPeoplePickerNavigationController Protocols
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+{
+    return YES;
+}
+
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier
+{
+    return YES;
+}
+
+- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

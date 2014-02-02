@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F087C54189E4B4700A77BCF /* FacialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F087C53189E4B4700A77BCF /* FacialViewController.m */; };
 		3F088ACE189E1903001C95EA /* bg.psd in Resources */ = {isa = PBXBuildFile; fileRef = 3F088AC9189E1903001C95EA /* bg.psd */; };
 		3F088ACF189E1903001C95EA /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F088ACA189E1903001C95EA /* bg2.png */; };
 		3F088AD0189E1903001C95EA /* bg3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F088ACB189E1903001C95EA /* bg3.png */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F087C52189E4B4700A77BCF /* FacialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacialViewController.h; sourceTree = "<group>"; };
+		3F087C53189E4B4700A77BCF /* FacialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacialViewController.m; sourceTree = "<group>"; };
 		3F088AC9189E1903001C95EA /* bg.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg.psd; sourceTree = "<group>"; };
 		3F088ACA189E1903001C95EA /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		3F088ACB189E1903001C95EA /* bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg3.png; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				3FE1CF33189DB0B700E8F55B /* TutorialViewController.h */,
 				3FE1CF34189DB0B700E8F55B /* TutorialViewController.m */,
 				3FE1CF30189DA1B400E8F55B /* ImagePickerViewController.h */,
+				3F087C52189E4B4700A77BCF /* FacialViewController.h */,
+				3F087C53189E4B4700A77BCF /* FacialViewController.m */,
 				3FE1CF31189DA1B400E8F55B /* ImagePickerViewController.m */,
 				3F32D7F8189B4C2300E109A8 /* ProfileViewController.h */,
 				3F32D7F9189B4C2300E109A8 /* ProfileViewController.m */,
@@ -332,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F087C54189E4B4700A77BCF /* FacialViewController.m in Sources */,
 				3FE1CF35189DB0B700E8F55B /* TutorialViewController.m in Sources */,
 				3F32D7FD189B4C2300E109A8 /* FinderViewController.m in Sources */,
 				B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */,

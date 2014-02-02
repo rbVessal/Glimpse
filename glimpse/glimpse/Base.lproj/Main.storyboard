@@ -193,11 +193,11 @@
                         <outlet property="ageTextField" destination="u6V-us-JTA" id="t0F-cD-BB3"/>
                         <outlet property="currentTownTextField" destination="JoL-Od-qyl" id="BZf-wg-Do5"/>
                         <outlet property="educationTextField" destination="VlR-Bm-qiV" id="AdF-r9-75c"/>
-                        <outlet property="emailTextField" destination="eJE-3B-Bw2" id="SSz-wW-osJ"/>
+                        <outlet property="emailTextField" destination="gHj-hV-e3t" id="p9j-vu-GIt"/>
                         <outlet property="hobbiesTextField" destination="3Wc-Iy-bku" id="6wg-Gw-rd2"/>
                         <outlet property="homeTownTextField" destination="pN3-ZV-X8A" id="Cjp-wd-rhK"/>
                         <outlet property="nameTextField" destination="abE-Ds-F5g" id="Atr-oP-l0C"/>
-                        <outlet property="phoneNumberTextField" destination="gHj-hV-e3t" id="sBt-6G-KVu"/>
+                        <outlet property="phoneNumberTextField" destination="eJE-3B-Bw2" id="64A-kH-H2p"/>
                         <outlet property="scrollview" destination="SWq-qT-h3C" id="lpM-k8-n2t"/>
                         <outlet property="workTextField" destination="jRq-3A-JSb" id="4ed-xz-nCt"/>
                     </connections>
@@ -343,13 +343,13 @@
                                 <rect key="frame" x="20" y="70" width="280" height="334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.96975623049592274" blue="0.48663943284409017" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">- Profile -
+                                <string key="text">- Profile -
   Profiles help people find out about who you are, and allow you to find out about other people. 
 
 - Lobby -
   This is where the magic happens! Start looking for people close by that also own Glimpse, and discover how easy it can be to break the ice. 
 
-Once you find someone that intrigues you, use the Finder to get a Glimpse at their profile. Should you choose to, add them to your contacts by touching the Marker above their head. You can also discover more about them by touching the Profile snippet displayed on screen.</mutableString>
+Once you find someone that intrigues you, use the Finder to get a Glimpse at their profile. Should you choose to, add them to your contacts by touching the Marker above their head. You can also discover more about them by touching the Profile snippet displayed on screen.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -388,7 +388,7 @@ Once you find someone that intrigues you, use the Finder to get a Glimpse at the
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="showPicker:" destination="QUy-BD-bpt" eventType="touchUpInside" id="ZHk-Yp-mLo"/>
+                                    <action selector="getPersonContact:" destination="QUy-BD-bpt" eventType="touchUpInside" id="aco-Iq-eNc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rNe-iX-XlO">
@@ -405,6 +405,17 @@ Once you find someone that intrigues you, use the Finder to get a Glimpse at the
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BNd-7a-rWV">
+                                <rect key="frame" x="137" y="160" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="findPeople:" destination="QUy-BD-bpt" eventType="touchUpInside" id="JEH-n3-NIU"/>
+                                    <segue destination="kix-gs-8Iq" kind="push" identifier="transitionToFacial" id="vuy-QY-IDn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -413,6 +424,21 @@ Once you find someone that intrigues you, use the Finder to get a Glimpse at the
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1383" y="290"/>
+        </scene>
+        <!--Facial View Controller-->
+        <scene sceneID="Q5y-dP-wnQ">
+            <objects>
+                <viewController id="kix-gs-8Iq" customClass="FacialViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U1I-Kb-5cR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OHm-dN-NCt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eA5-Dz-Q6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-947" y="328"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">

@@ -22,6 +22,9 @@
 	// Do any additional setup after loading the view.
     _contractGrabber = [[ContactGrabber alloc]init];
     _contractGrabber.delegate = self;
+    
+    UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    self.animator = animator;
 }
 
 -(IBAction)getPersonContact:(id)sender
@@ -63,5 +66,28 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+// UIKit Dynamics
+
+- (IBAction)handleSnapGesture:(UITapGestureRecognizer*)gesture
+{
+    CGPoint point = [gesture locationInView:self.view];
+    
+    
+    // Remove the previous behavior.
+    [self.animator removeBehavior:self.snapBehavior];
+    
+    UISnapBehavior *snapBehavior = [[UISnapBehavior alloc] initWithItem:self.marker snapToPoint:point];
+    [self.animator addBehavior:snapBehavior];
+    
+    UISnapBehavior *snapBehavior = [[UISnapBehavior alloc] initWithItem:self.get snapToPoint:point];
+    [self.animator addBehavior:snapBehavior];
+    
+    self.snapBehavior = snapBehavior;
+    
+    //self.getContactsBtn.center = CGPointMake(self.marker.center.x, self.marker.center.y);
+}
+
 
 @end

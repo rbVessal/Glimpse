@@ -57,6 +57,7 @@
 /* Begin PBXFileReference section */
 		3F087C52189E4B4700A77BCF /* FacialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacialViewController.h; sourceTree = "<group>"; };
 		3F087C53189E4B4700A77BCF /* FacialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacialViewController.m; sourceTree = "<group>"; };
+		3F087C55189EA94D00A77BCF /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		3F088AC9189E1903001C95EA /* bg.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg.psd; sourceTree = "<group>"; };
 		3F088ACA189E1903001C95EA /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		3F088ACB189E1903001C95EA /* bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg3.png; sourceTree = "<group>"; };
@@ -108,10 +109,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F32D7E8189B4C2300E109A8 /* UIKit.framework in Frameworks */,
 				B3BFE229189BFC5D00695E82 /* AddressBook.framework in Frameworks */,
 				B3BFE22A189BFC5D00695E82 /* AddressBookUI.framework in Frameworks */,
 				3F32D7E6189B4C2300E109A8 /* CoreGraphics.framework in Frameworks */,
-				3F32D7E8189B4C2300E109A8 /* UIKit.framework in Frameworks */,
 				3F32D7E4189B4C2300E109A8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +152,7 @@
 		3F32D7E2189B4C2200E109A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F087C55189EA94D00A77BCF /* SpriteKit.framework */,
 				B3BFE227189BFC5D00695E82 /* AddressBook.framework */,
 				B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */,
 				3F32D7E3189B4C2200E109A8 /* Foundation.framework */,

@@ -26,5 +26,13 @@
 
 -(IBAction)getPersonContact:(id)sender;
 
+// UIKit Dynamics
+@property (nonatomic, weak) IBOutlet UIView *marker;
+@property (nonatomic, strong) UIDynamicAnimator *animator;
+//! Reference to the previously applied snap behavior.
+@property (nonatomic, strong) UISnapBehavior *snapBehavior;
+
+@property (nonatomic, weak) IBOutlet UIButton * getContactsBtn;
+
 
 @end

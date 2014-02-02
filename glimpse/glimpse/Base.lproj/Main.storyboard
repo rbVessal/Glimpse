@@ -150,6 +150,9 @@
                                                 <state key="normal" title="Save">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="saveProfileInformation:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="SNJ-jc-8rs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ods-ec-5yJ">
                                                 <rect key="frame" x="234" y="223" width="39" height="30"/>

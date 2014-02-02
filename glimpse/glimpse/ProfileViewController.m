@@ -24,7 +24,7 @@
     [super viewDidLoad];
     //Resize the scrollview to be bigger than the viewcontroller
     //so that scrolling is enabled
-    [self.scrollview setContentSize:CGSizeMake(340, 800)];
+    [self.scrollview setContentSize:CGSizeMake(340, 825)];
     //Set the textfield delegates
     self.nameTextField.delegate = self;
     self.ageTextField.delegate = self;
@@ -60,6 +60,28 @@
     [_arrayOfTextFields addObject:self.emailTextField];
     [_arrayOfTextFields addObject:self.phoneNumberTextField];
     
+    //Assign a tap guesture recognizer to the view to be able to dismiss
+    //the keyboard when the user taps outside of the textfield
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    
+}
+
+-(void)dismissKeyboard
+{
+    [self.nameTextField resignFirstResponder];
+    [self.ageTextField resignFirstResponder];
+    [self.homeTownTextField resignFirstResponder];
+    [self.homeTownTextField resignFirstResponder];
+    [self.currentTownTextField resignFirstResponder];
+    [self.educationTextField resignFirstResponder];
+    [self.workTextField resignFirstResponder];
+    [self.hobbiesTextField resignFirstResponder];
+    [self.emailTextField resignFirstResponder];
+    [self.phoneNumberTextField resignFirstResponder];
 }
 
 // Called when the UIKeyboardDidShowNotification is sent.
@@ -126,16 +148,7 @@
     }
     
     //Dismiss the keyboard
-    [self.nameTextField resignFirstResponder];
-    [self.ageTextField resignFirstResponder];
-    [self.homeTownTextField resignFirstResponder];
-    [self.homeTownTextField resignFirstResponder];
-    [self.currentTownTextField resignFirstResponder];
-    [self.educationTextField resignFirstResponder];
-    [self.workTextField resignFirstResponder];
-    [self.hobbiesTextField resignFirstResponder];
-    [self.emailTextField resignFirstResponder];
-    [self.phoneNumberTextField resignFirstResponder];
+    [self dismissKeyboard];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

@@ -28,6 +28,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.navigationItem.title = @"Image Picker";
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.navigationItem.title = @"Image Picker";
 }
 
 - (void)didReceiveMemoryWarning

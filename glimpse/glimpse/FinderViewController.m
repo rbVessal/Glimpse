@@ -33,8 +33,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.tabBarController.navigationItem.title = @"Lobby";
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    self.tabBarController.navigationItem.title = @"Lobby";
+}
 
 // MultiPeer Connectivity
 

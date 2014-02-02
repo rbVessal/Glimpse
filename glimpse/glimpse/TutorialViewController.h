@@ -10,4 +10,6 @@
 
 @interface TutorialViewController : UIViewController
 
+//@property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
+
 @end

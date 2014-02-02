@@ -10,4 +10,6 @@
 
 @interface AboutViewController : UIViewController
 
+//@property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
+
 @end

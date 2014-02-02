@@ -15,6 +15,7 @@
 
 - (IBAction)findPeople:(id)sender;
 @property (nonatomic, weak) IBOutlet UIButton * finderButton;
+//@property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
 //@property (nonatomic, weak) IBOutlet UINavigationController * transitionToFacial;
 
 

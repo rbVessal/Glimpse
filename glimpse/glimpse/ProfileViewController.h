@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+//@property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
 
 -(IBAction)saveProfileInformation:(id)sender;
 

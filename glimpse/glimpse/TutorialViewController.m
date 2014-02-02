@@ -17,7 +17,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tabBarController.navigationItem.title = @"Tutorial";
 	// Do any additional setup after loading the view.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    self.tabBarController.navigationItem.title = @"Tutorial";
 }
 
 - (void)didReceiveMemoryWarning

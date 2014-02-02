@@ -67,6 +67,8 @@
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+    
+    self.tabBarController.navigationItem.title = @"Profile";
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -83,6 +85,10 @@
     self.hobbiesTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Hobbies"];
     self.emailTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Email"];
     self.phoneNumberTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Phone Number"];
+    
+    //Change the navigation title to the profile
+    self.tabBarController.navigationItem.title = @"Profile";
+
 }
 
 -(void)dismissKeyboard

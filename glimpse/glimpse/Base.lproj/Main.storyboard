@@ -412,8 +412,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="swr-aa-ePb"/>
                     <connections>
+
                         <outlet property="getContactsBtn" destination="5Pb-Jh-IXM" id="jyV-2F-eze"/>
                         <outlet property="marker" destination="X3f-kH-aDc" id="3uQ-NZ-UoV"/>
+
+                        <outlet property="view" destination="BUl-ZK-Iqv" id="jzO-P9-aIc"/>
+
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBD-8o-DQV" userLabel="First Responder" sceneMemberID="firstResponder"/>

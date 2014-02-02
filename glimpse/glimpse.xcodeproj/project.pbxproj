@@ -42,6 +42,8 @@
 		B3BFE22A189BFC5D00695E82 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */; };
 		B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BFE22C189BFE0200695E82 /* AboutViewController.m */; };
 		B3DB2C25189E4F750051E341 /* ContactGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DB2C24189E4F750051E341 /* ContactGrabber.m */; };
+		B3DFD08E189EA91A0019DAED /* FaceDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFD08D189EA91A0019DAED /* FaceDetector.m */; };
+		B3DFD090189EC0340019DAED /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFD08F189EC0340019DAED /* border.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,9 @@
 		B3BFE22C189BFE0200695E82 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		B3DB2C23189E4F750051E341 /* ContactGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactGrabber.h; sourceTree = "<group>"; };
 		B3DB2C24189E4F750051E341 /* ContactGrabber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactGrabber.m; sourceTree = "<group>"; };
+		B3DFD08C189EA91A0019DAED /* FaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetector.h; sourceTree = "<group>"; };
+		B3DFD08D189EA91A0019DAED /* FaceDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetector.m; sourceTree = "<group>"; };
+		B3DFD08F189EC0340019DAED /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +190,8 @@
 				3F32D7EA189B4C2300E109A8 /* Supporting Files */,
 				B3DB2C23189E4F750051E341 /* ContactGrabber.h */,
 				B3DB2C24189E4F750051E341 /* ContactGrabber.m */,
+				B3DFD08C189EA91A0019DAED /* FaceDetector.h */,
+				B3DFD08D189EA91A0019DAED /* FaceDetector.m */,
 			);
 			path = glimpse;
 			sourceTree = "<group>";
@@ -192,6 +199,7 @@
 		3F32D7EA189B4C2300E109A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B3DFD08F189EC0340019DAED /* border.png */,
 				3F36AEEF189CB85700DFFC3A /* iconexample.png */,
 				3F36AEED189CB63300DFFC3A /* about_icon.png */,
 				3F088AC9189E1903001C95EA /* bg.psd */,
@@ -317,6 +325,7 @@
 				3F36AEEE189CB63300DFFC3A /* about_icon.png in Resources */,
 				3F088ADC189E1E9E001C95EA /* splash.png in Resources */,
 				3F32D7FF189B4C2300E109A8 /* Images.xcassets in Resources */,
+				B3DFD090189EC0340019DAED /* border.png in Resources */,
 				3F088AD6189E1E90001C95EA /* iTunesArtwork_58.png in Resources */,
 				3F32D7EE189B4C2300E109A8 /* InfoPlist.strings in Resources */,
 				3F088AD1189E1903001C95EA /* bg4.png in Resources */,
@@ -348,6 +357,7 @@
 				3FE1CF35189DB0B700E8F55B /* TutorialViewController.m in Sources */,
 				B3DB2C25189E4F750051E341 /* ContactGrabber.m in Sources */,
 				3F32D7FD189B4C2300E109A8 /* FinderViewController.m in Sources */,
+				B3DFD08E189EA91A0019DAED /* FaceDetector.m in Sources */,
 				B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */,
 				3F32D7F4189B4C2300E109A8 /* AppDelegate.m in Sources */,
 				3F32D7FA189B4C2300E109A8 /* ProfileViewController.m in Sources */,

@@ -10,6 +10,7 @@
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
 #import "ContactGrabber.h"
+#import "FaceDetector.h"
 
 @interface FacialViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate, ContactGrabberDelegate>
 

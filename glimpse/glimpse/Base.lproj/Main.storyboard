@@ -373,6 +373,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BNd-7a-rWV">
+                                <rect key="frame" x="137" y="160" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="findPeople:" destination="QUy-BD-bpt" eventType="touchUpInside" id="JEH-n3-NIU"/>
+                                    <segue destination="kix-gs-8Iq" kind="push" identifier="transitionToFacial" id="vuy-QY-IDn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -381,6 +392,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1383" y="290"/>
+        </scene>
+        <!--Facial View Controller-->
+        <scene sceneID="Q5y-dP-wnQ">
+            <objects>
+                <viewController id="kix-gs-8Iq" customClass="FacialViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U1I-Kb-5cR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OHm-dN-NCt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eA5-Dz-Q6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-947" y="328"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">

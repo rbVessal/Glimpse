@@ -24,6 +24,8 @@
 		3F32D812189B4C2300E109A8 /* glimpseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32D811189B4C2300E109A8 /* glimpseTests.m */; };
 		3F36AEEE189CB63300DFFC3A /* about_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F36AEED189CB63300DFFC3A /* about_icon.png */; };
 		3F36AEF0189CB85700DFFC3A /* iconexample.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F36AEEF189CB85700DFFC3A /* iconexample.png */; };
+		3FE1CF32189DA1B400E8F55B /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1CF31189DA1B400E8F55B /* ImagePickerViewController.m */; };
+		3FE1CF35189DB0B700E8F55B /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1CF34189DB0B700E8F55B /* TutorialViewController.m */; };
 		B3BFE229189BFC5D00695E82 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BFE227189BFC5D00695E82 /* AddressBook.framework */; };
 		B3BFE22A189BFC5D00695E82 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */; };
 		B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BFE22C189BFE0200695E82 /* AboutViewController.m */; };
@@ -63,6 +65,10 @@
 		3F32D811189B4C2300E109A8 /* glimpseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = glimpseTests.m; sourceTree = "<group>"; };
 		3F36AEED189CB63300DFFC3A /* about_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_icon.png; sourceTree = "<group>"; };
 		3F36AEEF189CB85700DFFC3A /* iconexample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconexample.png; sourceTree = "<group>"; };
+		3FE1CF30189DA1B400E8F55B /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
+		3FE1CF31189DA1B400E8F55B /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
+		3FE1CF33189DB0B700E8F55B /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		3FE1CF34189DB0B700E8F55B /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		B3BFE227189BFC5D00695E82 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		B3BFE22B189BFE0200695E82 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -135,6 +141,10 @@
 				3F32D7F2189B4C2300E109A8 /* AppDelegate.h */,
 				3F32D7F3189B4C2300E109A8 /* AppDelegate.m */,
 				3F32D7F5189B4C2300E109A8 /* Main.storyboard */,
+				3FE1CF33189DB0B700E8F55B /* TutorialViewController.h */,
+				3FE1CF34189DB0B700E8F55B /* TutorialViewController.m */,
+				3FE1CF30189DA1B400E8F55B /* ImagePickerViewController.h */,
+				3FE1CF31189DA1B400E8F55B /* ImagePickerViewController.m */,
 				3F32D7F8189B4C2300E109A8 /* ProfileViewController.h */,
 				3F32D7F9189B4C2300E109A8 /* ProfileViewController.m */,
 				3F32D7FB189B4C2300E109A8 /* FinderViewController.h */,
@@ -223,6 +233,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Student;
 				TargetAttributes = {
+					3F32D7DF189B4C2200E109A8 = {
+						DevelopmentTeam = B747352D8N;
+					};
 					3F32D803189B4C2300E109A8 = {
 						TestTargetID = 3F32D7DF189B4C2200E109A8;
 					};
@@ -275,10 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE1CF35189DB0B700E8F55B /* TutorialViewController.m in Sources */,
 				3F32D7FD189B4C2300E109A8 /* FinderViewController.m in Sources */,
 				B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */,
 				3F32D7F4189B4C2300E109A8 /* AppDelegate.m in Sources */,
 				3F32D7FA189B4C2300E109A8 /* ProfileViewController.m in Sources */,
+				3FE1CF32189DA1B400E8F55B /* ImagePickerViewController.m in Sources */,
 				3F32D7F0189B4C2300E109A8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "glimpse/glimpse-Prefix.pch";
 				INFOPLIST_FILE = "glimpse/glimpse-Info.plist";
@@ -419,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "glimpse/glimpse-Prefix.pch";
 				INFOPLIST_FILE = "glimpse/glimpse-Info.plist";

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F088ACE189E1903001C95EA /* bg.psd in Resources */ = {isa = PBXBuildFile; fileRef = 3F088AC9189E1903001C95EA /* bg.psd */; };
+		3F088ACF189E1903001C95EA /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F088ACA189E1903001C95EA /* bg2.png */; };
+		3F088AD0189E1903001C95EA /* bg3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F088ACB189E1903001C95EA /* bg3.png */; };
+		3F088AD1189E1903001C95EA /* bg4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F088ACC189E1903001C95EA /* bg4.png */; };
+		3F088AD2189E1903001C95EA /* bg5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F088ACD189E1903001C95EA /* bg5.png */; };
+		3F088AD6189E1E90001C95EA /* iTunesArtwork_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F088AD3189E1E90001C95EA /* iTunesArtwork_58.png */; };
+		3F088AD7189E1E90001C95EA /* iTunesArtwork_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F088AD4189E1E90001C95EA /* iTunesArtwork_80.png */; };
+		3F088AD8189E1E90001C95EA /* iTunesArtwork_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F088AD5189E1E90001C95EA /* iTunesArtwork_120.png */; };
+		3F088ADB189E1E9E001C95EA /* splash_960.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F088AD9189E1E9E001C95EA /* splash_960.png */; };
+		3F088ADC189E1E9E001C95EA /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F088ADA189E1E9E001C95EA /* splash.png */; };
 		3F32D7E4189B4C2300E109A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F32D7E3189B4C2200E109A8 /* Foundation.framework */; };
 		3F32D7E6189B4C2300E109A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F32D7E5189B4C2300E109A8 /* CoreGraphics.framework */; };
 		3F32D7E8189B4C2300E109A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F32D7E7189B4C2300E109A8 /* UIKit.framework */; };
@@ -42,6 +52,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F088AC9189E1903001C95EA /* bg.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg.psd; sourceTree = "<group>"; };
+		3F088ACA189E1903001C95EA /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
+		3F088ACB189E1903001C95EA /* bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg3.png; sourceTree = "<group>"; };
+		3F088ACC189E1903001C95EA /* bg4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg4.png; sourceTree = "<group>"; };
+		3F088ACD189E1903001C95EA /* bg5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg5.png; sourceTree = "<group>"; };
+		3F088AD3189E1E90001C95EA /* iTunesArtwork_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork_58.png; sourceTree = "<group>"; };
+		3F088AD4189E1E90001C95EA /* iTunesArtwork_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork_80.png; sourceTree = "<group>"; };
+		3F088AD5189E1E90001C95EA /* iTunesArtwork_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork_120.png; sourceTree = "<group>"; };
+		3F088AD9189E1E9E001C95EA /* splash_960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_960.png; sourceTree = "<group>"; };
+		3F088ADA189E1E9E001C95EA /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		3F32D7E0189B4C2200E109A8 /* glimpse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = glimpse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F32D7E3189B4C2200E109A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F32D7E5189B4C2300E109A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -160,6 +180,16 @@
 			children = (
 				3F36AEEF189CB85700DFFC3A /* iconexample.png */,
 				3F36AEED189CB63300DFFC3A /* about_icon.png */,
+				3F088AC9189E1903001C95EA /* bg.psd */,
+				3F088ACA189E1903001C95EA /* bg2.png */,
+				3F088ACB189E1903001C95EA /* bg3.png */,
+				3F088AD3189E1E90001C95EA /* iTunesArtwork_58.png */,
+				3F088AD4189E1E90001C95EA /* iTunesArtwork_80.png */,
+				3F088AD5189E1E90001C95EA /* iTunesArtwork_120.png */,
+				3F088AD9189E1E9E001C95EA /* splash_960.png */,
+				3F088ADA189E1E9E001C95EA /* splash.png */,
+				3F088ACC189E1903001C95EA /* bg4.png */,
+				3F088ACD189E1903001C95EA /* bg5.png */,
 				3F32D7EB189B4C2300E109A8 /* glimpse-Info.plist */,
 				3F32D7EC189B4C2300E109A8 /* InfoPlist.strings */,
 				3F32D7EF189B4C2300E109A8 /* main.m */,
@@ -265,10 +295,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F088AD7189E1E90001C95EA /* iTunesArtwork_80.png in Resources */,
+				3F088AD2189E1903001C95EA /* bg5.png in Resources */,
+				3F088ADB189E1E9E001C95EA /* splash_960.png in Resources */,
 				3F36AEEE189CB63300DFFC3A /* about_icon.png in Resources */,
+				3F088ADC189E1E9E001C95EA /* splash.png in Resources */,
 				3F32D7FF189B4C2300E109A8 /* Images.xcassets in Resources */,
+				3F088AD6189E1E90001C95EA /* iTunesArtwork_58.png in Resources */,
 				3F32D7EE189B4C2300E109A8 /* InfoPlist.strings in Resources */,
+				3F088AD1189E1903001C95EA /* bg4.png in Resources */,
+				3F088ACF189E1903001C95EA /* bg2.png in Resources */,
+				3F088AD8189E1E90001C95EA /* iTunesArtwork_120.png in Resources */,
 				3F32D7F7189B4C2300E109A8 /* Main.storyboard in Resources */,
+				3F088ACE189E1903001C95EA /* bg.psd in Resources */,
+				3F088AD0189E1903001C95EA /* bg3.png in Resources */,
 				3F36AEF0189CB85700DFFC3A /* iconexample.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,8 +459,6 @@
 		3F32D816189B4C2300E109A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "glimpse/glimpse-Prefix.pch";
@@ -433,8 +471,6 @@
 		3F32D817189B4C2300E109A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "glimpse/glimpse-Prefix.pch";

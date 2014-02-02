@@ -41,7 +41,7 @@
 	UIImagePickerController * picker = [[UIImagePickerController alloc] init];
 	picker.delegate = self;
     
-	if((UIButton *) sender == choosePhotoBtn) {
+	if((UIButton *) sender == self.choosePhotoBtn) {
 		picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
 	} else {
 		picker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -52,7 +52,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 	[picker dismissModalViewControllerAnimated:YES];
-	imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+	self.imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 }
 
 @end

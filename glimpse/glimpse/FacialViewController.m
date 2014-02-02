@@ -94,8 +94,8 @@
     UISnapBehavior *snapBehavior = [[UISnapBehavior alloc] initWithItem:self.marker snapToPoint:point];
     [self.animator addBehavior:snapBehavior];
     
-    UISnapBehavior *snapBehavior = [[UISnapBehavior alloc] initWithItem:self.get snapToPoint:point];
-    [self.animator addBehavior:snapBehavior];
+    //UISnapBehavior *snapBehavior = [[UISnapBehavior alloc] initWithItem:self.get snapToPoint:point];
+    //[self.animator addBehavior:snapBehavior];
     
     self.snapBehavior = snapBehavior;
     

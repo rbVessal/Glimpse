@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="IUQ-0D-xMV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="IUQ-0D-xMV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--Profile View Controller - First-->
@@ -378,7 +378,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Pb-Jh-IXM">
-                                <rect key="frame" x="38" y="82" width="320" height="46"/>
+                                <rect key="frame" x="0.0" y="82" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Get Contacts">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -387,15 +387,29 @@
                                     <action selector="getPersonContact:" destination="j5S-CZ-q3D" eventType="touchUpInside" id="LJU-LJ-vW6"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box1" id="X3f-kH-aDc">
+                                <rect key="frame" x="322" y="105" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="r3v-3k-5z8" appends="YES" id="V71-Ie-gOi"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="swr-aa-ePb"/>
                     <connections>
+                        <outlet property="getContactsBtn" destination="5Pb-Jh-IXM" id="jyV-2F-eze"/>
+                        <outlet property="marker" destination="X3f-kH-aDc" id="3uQ-NZ-UoV"/>
                         <outlet property="view" destination="BUl-ZK-Iqv" id="jzO-P9-aIc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBD-8o-DQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="r3v-3k-5z8">
+                    <connections>
+                        <action selector="handleSnapGesture:" destination="j5S-CZ-q3D" id="ZZc-lA-pXE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-928" y="326"/>
         </scene>
@@ -438,6 +452,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Box1" width="100" height="100"/>
         <image name="about_icon.png" width="25" height="25"/>
         <image name="bg2.png" width="640" height="1136"/>
         <image name="bg3.png" width="640" height="1136"/>

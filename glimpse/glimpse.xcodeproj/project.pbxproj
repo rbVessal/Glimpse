@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F087C51189E388000A77BCF /* FacialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F087C50189E388000A77BCF /* FacialViewController.m */; };
 		3F32D7E4189B4C2300E109A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F32D7E3189B4C2200E109A8 /* Foundation.framework */; };
 		3F32D7E6189B4C2300E109A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F32D7E5189B4C2300E109A8 /* CoreGraphics.framework */; };
 		3F32D7E8189B4C2300E109A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F32D7E7189B4C2300E109A8 /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F087C4F189E388000A77BCF /* FacialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacialViewController.h; sourceTree = "<group>"; };
+		3F087C50189E388000A77BCF /* FacialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacialViewController.m; sourceTree = "<group>"; };
 		3F32D7E0189B4C2200E109A8 /* glimpse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = glimpse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F32D7E3189B4C2200E109A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F32D7E5189B4C2300E109A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,6 +144,8 @@
 				3F32D7F2189B4C2300E109A8 /* AppDelegate.h */,
 				3F32D7F3189B4C2300E109A8 /* AppDelegate.m */,
 				3F32D7F5189B4C2300E109A8 /* Main.storyboard */,
+				3F087C4F189E388000A77BCF /* FacialViewController.h */,
+				3F087C50189E388000A77BCF /* FacialViewController.m */,
 				3FE1CF33189DB0B700E8F55B /* TutorialViewController.h */,
 				3FE1CF34189DB0B700E8F55B /* TutorialViewController.m */,
 				3FE1CF30189DA1B400E8F55B /* ImagePickerViewController.h */,
@@ -288,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F087C51189E388000A77BCF /* FacialViewController.m in Sources */,
 				3FE1CF35189DB0B700E8F55B /* TutorialViewController.m in Sources */,
 				3F32D7FD189B4C2300E109A8 /* FinderViewController.m in Sources */,
 				B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */,

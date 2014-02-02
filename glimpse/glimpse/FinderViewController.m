@@ -7,11 +7,23 @@
 //
 
 #import "FinderViewController.h"
+#import "FacialViewController.h"
 
 @interface FinderViewController ()
 {
     ABAddressBookRef _addressBook;
 }
+
+@property (nonatomic, strong) NSString * personsImage;
+@property (nonatomic, strong) NSString * personsName;
+@property (nonatomic, strong) NSString * personsAge;
+@property (nonatomic, strong) NSString * personsHomeTown;
+@property (nonatomic, strong) NSString * personsCurrent;
+@property (nonatomic, strong) NSString * personsEducation;
+@property (nonatomic, strong) NSString * personsWork;
+@property (nonatomic, strong) NSString * personsHobbies;
+@property (nonatomic, strong) NSString * personsPhone;
+@property (nonatomic, strong) NSString * personsEmail;
 
 @end
 
@@ -139,4 +151,39 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+// MultiPeer Connectivity
+
+// Prepare to transfer data to another viewport
+- (void) personsDataGathered {    
+    [self performSegueWithIdentifier: @"transitionToFacial" sender: self];
+}
+
+// Seque is being performed
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"transitionToFacial"]){
+        FacialViewController *controller = (FacialViewController *)segue.destinationViewController;
+        controller.personsImage = self.personsImage;
+        controller.personsName = self.personsName;
+        controller.personsAge = self.personsAge;
+        controller.personsHomeTown = self.personsHomeTown;
+        controller.personsCurrent = self.personsCurrent;
+        controller.personsEducation = self.personsEducation;
+        controller.personsWork = self.personsWork;
+        controller.personsHobbies = self.personsHobbies;
+        controller.personsPhone = self.personsPhone;
+        controller.personsEmail = self.personsEmail;
+        
+    }
+}
+
+
+
+- (IBAction)findPeople:(id)sender {
+    
+    self.personsName = @"NameP";
+    [self personsDataGathered];
+    
+}
 @end

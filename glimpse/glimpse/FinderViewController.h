@@ -11,7 +11,14 @@
 #import <AddressBook/AddressBook.h>
 
 @interface FinderViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
+{
+    UIButton * finderButton;
+}
 
+- (IBAction)findPeople:(id)sender;
+@property (nonatomic, weak) IBOutlet UIButton * finderButton;
 -(IBAction)showPicker:(id)sender;
+
+// Persons Data
 
 @end

@@ -48,6 +48,8 @@
 	}
     
 	[self presentModalViewController:picker animated:YES];
+    //[self.confirmBtn setEnabled:true];
+    
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -56,9 +58,12 @@
     
 }
 
+// return to profile page
 -(IBAction) dismissView:(id) sender
 {
     [self dismissModalViewControllerAnimated:YES];
+    //ProfileViewController.view.
+
 }
 
 

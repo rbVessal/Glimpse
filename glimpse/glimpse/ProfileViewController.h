@@ -20,7 +20,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *hobbiesTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
+@property (weak, nonatomic) IBOutlet UIImage     *profilePicture;
 
 -(IBAction)saveProfileInformation:(id)sender;
+-(IBAction) getPhoto:(id) sender;
 
 @end

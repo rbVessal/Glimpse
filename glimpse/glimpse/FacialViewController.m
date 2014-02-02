@@ -53,6 +53,11 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

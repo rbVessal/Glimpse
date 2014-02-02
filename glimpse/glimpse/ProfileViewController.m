@@ -67,7 +67,19 @@
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
-    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.nameTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Name"];
+    self.ageTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Age"];
+    self.homeTownTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"HomeTown"];
+    self.currentTownTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"CurrentTown"];
+    self.educationTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Education"];
+    self.workTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Work"];
+    self.hobbiesTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Hobbies"];
+    self.emailTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Email"];
+    self.phoneNumberTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Phone Number"];
 }
 
 -(void)dismissKeyboard
@@ -134,9 +146,10 @@
     {
         [[NSUserDefaults standardUserDefaults]setObject:self.workTextField.text forKey:@"Work"];
     }
+    
     if(![self.hobbiesTextField.text isEqualToString:@""])
     {
-        [[NSUserDefaults standardUserDefaults]setObject:self.hobbiesTextField.text forKey:@"Hobbies"];
+        [[NSUserDefaults standardUserDefaults]setObject:self.hobbiesTextField.text forKey:@"Hobbies"];        
     }
     if(![self.emailTextField.text isEqualToString:@""])
     {

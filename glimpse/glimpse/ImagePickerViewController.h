@@ -13,6 +13,8 @@
 	UIButton * choosePhotoBtn;
 	UIButton * takePhotoBtn;
     UIButton * confirmBtn;
+    
+    UIViewController *ProfileViewController;
 }
 
 @property (nonatomic, weak) IBOutlet UIImageView * imageView;

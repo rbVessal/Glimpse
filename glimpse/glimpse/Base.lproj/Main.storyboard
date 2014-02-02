@@ -157,21 +157,29 @@
                                                     <action selector="saveProfileInformation:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="SNJ-jc-8rs"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ods-ec-5yJ">
-                                                <rect key="frame" x="238" y="151" width="39" height="30"/>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6lb-Cu-88k">
+                                                <rect key="frame" x="312" y="116" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Go to">
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ods-ec-5yJ">
+                                                <rect key="frame" x="312" y="116" width="100" height="98"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="ZAI-Xd-Rz1" kind="modal" id="BR4-60-Pue"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6lb-Cu-88k">
-                                                <rect key="frame" x="312" y="116" width="100" height="100"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR PHOTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HnI-pj-oSn">
+                                                <rect key="frame" x="306" y="155" width="113" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            </imageView>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="13"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </view>
                                 </subviews>
@@ -208,6 +216,10 @@
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg5.png" id="Whg-wq-l8A">
                                 <rect key="frame" x="-154" y="-55" width="640" height="1136"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg5.png" id="RDh-hX-tw0">
+                                <rect key="frame" x="-144" y="-45" width="640" height="1136"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" id="cAE-qY-kXo">
@@ -275,16 +287,28 @@
                                 <rect key="frame" x="-98" y="-336" width="640" height="1136"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="About Us" lineBreakMode="tailTruncation" minimumFontSize="10" id="fb9-R3-3BJ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="About" lineBreakMode="tailTruncation" minimumFontSize="10" id="fb9-R3-3BJ">
                                 <rect key="frame" x="20" y="20" width="280" height="42"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="28"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="We're a team of people that do things." id="bF4-Fv-ZRw">
-                                <rect key="frame" x="20" y="70" width="280" height="426"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" id="bF4-Fv-ZRw">
+                                <rect key="frame" x="20" y="70" width="280" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.9764262798099641" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <string key="text">Welcome to Glimpse, where social networking and interpersonal mingling intertwine. This application was created for the purpose of bringing strangers together in a hybrid of old-fashioned conversation and contemporary digital media. Glimpse gives you the option of making educated decisions about who you expose yourself to, while still giving you the freedom and fun of meeting someone new.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="20z-6r-VSf">
+                                <rect key="frame" x="20" y="270" width="280" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.97642627979999996" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <string key="text">- Credits -
+  Rebecca Vessal
+  Matt DeNovio
+  Amanda Imperial</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -305,8 +329,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg3.png" id="GWK-SP-FjY">
-                                <rect key="frame" x="-60" y="-214" width="640" height="1136"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg.png" id="veR-3o-Lgz">
+                                <rect key="frame" x="-145" y="-246" width="640" height="1136"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Tutorial" lineBreakMode="tailTruncation" minimumFontSize="10" id="yPy-OO-n3C">
@@ -315,10 +339,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="A TUTORIAL AND STUFF" id="fTo-oT-V1C">
-                                <rect key="frame" x="20" y="70" width="280" height="418"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="fTo-oT-V1C">
+                                <rect key="frame" x="20" y="70" width="280" height="334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.96975623049592274" blue="0.48663943284409017" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">- Profile -
+  Profiles help people find out about who you are, and allow you to find out about other people. 
+
+- Lobby -
+  This is where the magic happens! Start looking for people close by that also own Glimpse, and discover how easy it can be to break the ice. 
+
+Once you find someone that intrigues you, use the Finder to get a Glimpse at their profile. Should you choose to, add them to your contacts by touching the Marker above their head. You can also discover more about them by touching the Profile snippet displayed on screen.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -350,8 +381,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sqi-Xz-t3c">
-                                <rect key="frame" x="0.0" y="70" width="320" height="46"/>
+                                <rect key="frame" x="57" y="70" width="206" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.849609375" blue="0.0752076121823059" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Get Contacts">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -406,8 +438,8 @@
     </scenes>
     <resources>
         <image name="about_icon.png" width="25" height="25"/>
+        <image name="bg.png" width="640" height="1136"/>
         <image name="bg2.png" width="640" height="1136"/>
-        <image name="bg3.png" width="640" height="1136"/>
         <image name="bg4.png" width="640" height="1136"/>
         <image name="bg5.png" width="640" height="1136"/>
         <image name="first" width="30" height="30"/>

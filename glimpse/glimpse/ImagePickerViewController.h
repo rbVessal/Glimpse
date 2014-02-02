@@ -12,11 +12,13 @@
 	UIImageView * imageView;
 	UIButton * choosePhotoBtn;
 	UIButton * takePhotoBtn;
+    UIButton * confirmBtn;
 }
 
 @property (nonatomic, weak) IBOutlet UIImageView * imageView;
 @property (nonatomic, weak) IBOutlet UIButton * choosePhotoBtn;
 @property (nonatomic, weak) IBOutlet UIButton * takePhotoBtn;
+@property (nonatomic, weak) IBOutlet UIButton * confirmBtn;
 
 -(IBAction) getPhoto:(id) sender;
 

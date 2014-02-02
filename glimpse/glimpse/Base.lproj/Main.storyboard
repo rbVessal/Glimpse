@@ -164,7 +164,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="ZAI-Xd-Rz1" kind="modal" id="k1O-PI-Cfc"/>
+                                                    <segue destination="ZAI-Xd-Rz1" kind="modal" id="BR4-60-Pue"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6lb-Cu-88k">
@@ -179,7 +179,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="u1e-5L-l1D"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="WOH-cT-gzj"/>
+                    <navigationItem key="navigationItem" title="Profile" id="Qr6-E9-FBL"/>
                     <connections>
                         <outlet property="ageTextField" destination="u6V-us-JTA" id="t0F-cD-BB3"/>
                         <outlet property="currentTownTextField" destination="JoL-Od-qyl" id="BZf-wg-Do5"/>
@@ -195,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1383" y="-326"/>
+            <point key="canvasLocation" x="-1383" y="-346"/>
         </scene>
         <!--Image Picker View Controller-->
         <scene sceneID="ghZ-lB-urJ">
@@ -206,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg5.png" id="Whg-wq-l8A">
-                                <rect key="frame" x="-146" y="-58" width="640" height="1136"/>
+                                <rect key="frame" x="-154" y="-55" width="640" height="1136"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" id="cAE-qY-kXo">
@@ -235,7 +236,7 @@
                                     <action selector="getPhoto:" destination="ZAI-Xd-Rz1" eventType="touchUpInside" id="MjA-0i-ApF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F7P-cU-pJH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F7P-cU-pJH">
                                 <rect key="frame" x="94" y="373" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97627662559999995" green="1" blue="0.70433840420000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -243,13 +244,15 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getPhoto:" destination="ZAI-Xd-Rz1" eventType="touchUpInside" id="AAf-PB-Vtr"/>
+                                    <action selector="dismissView:" destination="ZAI-Xd-Rz1" eventType="touchUpInside" id="SUu-l1-bI9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OkX-hr-TV0"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gH7-dU-XfI"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="choosePhotoBtn" destination="r2z-dg-RpO" id="8KS-aD-Y6D"/>
                         <outlet property="imageView" destination="cAE-qY-kXo" id="zap-pa-HG5"/>
@@ -258,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wql-ID-7u1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-986" y="-326"/>
+            <point key="canvasLocation" x="-940" y="-346"/>
         </scene>
         <!--About View Controller - About-->
         <scene sceneID="gnd-c8-LE3">
@@ -377,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1383" y="310"/>
+            <point key="canvasLocation" x="-1383" y="290"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -390,7 +393,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="CZ4-MO-1fc" kind="relationship" relationship="viewControllers" id="SUk-Ux-ee1"/>
+                        <segue destination="CZ4-MO-1fc" kind="relationship" relationship="viewControllers" id="5KC-DH-bDu"/>
                         <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
                         <segue destination="jFZ-zh-Wa4" kind="relationship" relationship="viewControllers" id="1nM-uZ-MmV"/>
                         <segue destination="APk-0F-aEU" kind="relationship" relationship="viewControllers" id="6cD-mp-h5D"/>
@@ -398,7 +401,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1904" y="-8"/>
+            <point key="canvasLocation" x="-1926" y="-10"/>
         </scene>
     </scenes>
     <resources>

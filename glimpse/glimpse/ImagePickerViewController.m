@@ -53,6 +53,13 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 	[picker dismissModalViewControllerAnimated:YES];
 	self.imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    
 }
+
+-(IBAction) dismissView:(id) sender
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 
 @end

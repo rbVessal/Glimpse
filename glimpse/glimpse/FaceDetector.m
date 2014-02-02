@@ -238,7 +238,8 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
                                                         frameSize:parentFrameSize
                                                      apertureSize:clearAperture.size];
 	
-	for ( CIFaceFeature *ff in features ) {
+	for ( CIFaceFeature *ff in features )
+    {
 		// find the correct position for the square layer within the previewLayer
 		// the feature box originates in the bottom left of the video frame.
 		// (Bottom right if mirroring is turned on)

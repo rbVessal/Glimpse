@@ -169,27 +169,13 @@
 		3F32D7E9189B4C2300E109A8 /* glimpse */ = {
 			isa = PBXGroup;
 			children = (
-				B3BFE22B189BFE0200695E82 /* AboutViewController.h */,
-				B3BFE22C189BFE0200695E82 /* AboutViewController.m */,
+				B3DFD092189ED9420019DAED /* Controllers */,
+				B3DFD091189ED9230019DAED /* Models */,
 				3F32D7F2189B4C2300E109A8 /* AppDelegate.h */,
 				3F32D7F3189B4C2300E109A8 /* AppDelegate.m */,
 				3F32D7F5189B4C2300E109A8 /* Main.storyboard */,
-				3FE1CF33189DB0B700E8F55B /* TutorialViewController.h */,
-				3FE1CF34189DB0B700E8F55B /* TutorialViewController.m */,
-				3FE1CF30189DA1B400E8F55B /* ImagePickerViewController.h */,
-				3F087C52189E4B4700A77BCF /* FacialViewController.h */,
-				3F087C53189E4B4700A77BCF /* FacialViewController.m */,
-				3FE1CF31189DA1B400E8F55B /* ImagePickerViewController.m */,
-				3F32D7F8189B4C2300E109A8 /* ProfileViewController.h */,
-				3F32D7F9189B4C2300E109A8 /* ProfileViewController.m */,
-				3F32D7FB189B4C2300E109A8 /* FinderViewController.h */,
-				3F32D7FC189B4C2300E109A8 /* FinderViewController.m */,
 				3F32D7FE189B4C2300E109A8 /* Images.xcassets */,
 				3F32D7EA189B4C2300E109A8 /* Supporting Files */,
-				B3DB2C23189E4F750051E341 /* ContactGrabber.h */,
-				B3DB2C24189E4F750051E341 /* ContactGrabber.m */,
-				B3DFD08C189EA91A0019DAED /* FaceDetector.h */,
-				B3DFD08D189EA91A0019DAED /* FaceDetector.m */,
 			);
 			path = glimpse;
 			sourceTree = "<group>";
@@ -235,6 +221,36 @@
 				3F32D80E189B4C2300E109A8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3DFD091189ED9230019DAED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B3DB2C23189E4F750051E341 /* ContactGrabber.h */,
+				B3DB2C24189E4F750051E341 /* ContactGrabber.m */,
+				B3DFD08C189EA91A0019DAED /* FaceDetector.h */,
+				B3DFD08D189EA91A0019DAED /* FaceDetector.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B3DFD092189ED9420019DAED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B3BFE22B189BFE0200695E82 /* AboutViewController.h */,
+				B3BFE22C189BFE0200695E82 /* AboutViewController.m */,
+				3FE1CF33189DB0B700E8F55B /* TutorialViewController.h */,
+				3FE1CF34189DB0B700E8F55B /* TutorialViewController.m */,
+				3FE1CF30189DA1B400E8F55B /* ImagePickerViewController.h */,
+				3FE1CF31189DA1B400E8F55B /* ImagePickerViewController.m */,
+				3F087C52189E4B4700A77BCF /* FacialViewController.h */,
+				3F087C53189E4B4700A77BCF /* FacialViewController.m */,
+				3F32D7F8189B4C2300E109A8 /* ProfileViewController.h */,
+				3F32D7F9189B4C2300E109A8 /* ProfileViewController.m */,
+				3F32D7FB189B4C2300E109A8 /* FinderViewController.h */,
+				3F32D7FC189B4C2300E109A8 /* FinderViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

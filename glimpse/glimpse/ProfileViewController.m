@@ -71,6 +71,9 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    //If the data exists, then fill in the profile with it
+    NSData *imageData = [[NSUserDefaults standardUserDefaults]objectForKey:@"Profile Picture"];
+    self.profileImage.image = [UIImage imageWithData:imageData];
     self.nameTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Name"];
     self.ageTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Age"];
     self.homeTownTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"HomeTown"];

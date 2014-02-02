@@ -18,7 +18,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *educationTextField;
 @property (weak, nonatomic) IBOutlet UITextField *workTextField;
 @property (weak, nonatomic) IBOutlet UITextField *hobbiesTextField;
-@property (weak, nonatomic) IBOutlet UITextField *contactTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 
 -(IBAction)saveProfileInformation:(id)sender;
 

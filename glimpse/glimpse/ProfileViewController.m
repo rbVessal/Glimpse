@@ -12,6 +12,7 @@
 {
     CGSize _keyboardSize;
     CGPoint _keyboardOrigin;
+    NSMutableArray *_arrayOfTextFields;
 }
 
 @end
@@ -21,6 +22,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //Resize the scrollview to be bigger than the viewcontroller
+    //so that scrolling is enabled
     [self.scrollview setContentSize:CGSizeMake(340, 800)];
     //Set the textfield delegates
     self.nameTextField.delegate = self;
@@ -30,7 +33,32 @@
     self.currentTownTextField.delegate = self;
     self.workTextField.delegate = self;
     self.hobbiesTextField.delegate = self;
+    self.emailTextField.delegate = self;
+    self.phoneNumberTextField.delegate = self;
     
+    //Add the next key to the keyboard
+    [self.nameTextField setReturnKeyType:UIReturnKeyNext];
+    [self.ageTextField setReturnKeyType:UIReturnKeyNext];
+    [self.educationTextField setReturnKeyType:UIReturnKeyNext];
+    [self.homeTownTextField setReturnKeyType:UIReturnKeyNext];
+    [self.currentTownTextField setReturnKeyType:UIReturnKeyNext];
+    [self.workTextField setReturnKeyType:UIReturnKeyNext];
+    [self.hobbiesTextField setReturnKeyType:UIReturnKeyNext];
+    [self.emailTextField setReturnKeyType:UIReturnKeyNext];
+    [self.phoneNumberTextField setReturnKeyType:UIReturnKeyNext];
+    
+    //Add the textfields to an array so that the tabbing functionality can
+    //be used on a mobile device
+    _arrayOfTextFields = [[NSMutableArray alloc]init];
+    [_arrayOfTextFields addObject:self.nameTextField];
+    [_arrayOfTextFields addObject:self.ageTextField];
+    [_arrayOfTextFields addObject:self.homeTownTextField];
+    [_arrayOfTextFields addObject:self.currentTownTextField];
+    [_arrayOfTextFields addObject:self.educationTextField];
+    [_arrayOfTextFields addObject:self.workTextField];
+    [_arrayOfTextFields addObject:self.hobbiesTextField];
+    [_arrayOfTextFields addObject:self.emailTextField];
+    [_arrayOfTextFields addObject:self.phoneNumberTextField];
     
 }
 
@@ -88,9 +116,13 @@
     {
         [[NSUserDefaults standardUserDefaults]setObject:self.hobbiesTextField.text forKey:@"Hobbies"];
     }
-    if(![self.contactTextField.text isEqualToString:@""])
+    if(![self.emailTextField.text isEqualToString:@""])
     {
-        [[NSUserDefaults standardUserDefaults]setObject:self.contactTextField.text forKey:@"Contact"];
+        [[NSUserDefaults standardUserDefaults]setObject:self.emailTextField.text forKey:@"Email"];
+    }
+    if(![self.phoneNumberTextField.text isEqualToString:@""])
+    {
+        [[NSUserDefaults standardUserDefaults]setObject:self.phoneNumberTextField.text forKey:@"Phone Number"];
     }
     
     //Dismiss the keyboard
@@ -102,7 +134,20 @@
     [self.educationTextField resignFirstResponder];
     [self.workTextField resignFirstResponder];
     [self.hobbiesTextField resignFirstResponder];
-    [self.contactTextField resignFirstResponder];
+    [self.emailTextField resignFirstResponder];
+    [self.phoneNumberTextField resignFirstResponder];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    //Find the textfield below if there is one
+    if(textField != self.phoneNumberTextField)
+    {
+        UITextField *nextTextField = [_arrayOfTextFields objectAtIndex:[_arrayOfTextFields indexOfObject:textField] + 1];
+        [nextTextField becomeFirstResponder];
+    }
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning

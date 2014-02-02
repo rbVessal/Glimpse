@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="IUQ-0D-xMV">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
@@ -112,7 +112,7 @@
                                                 <rect key="frame" x="317" y="506" width="185" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone #" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uzt-FR-Egf">
                                                 <rect key="frame" x="222" y="510" width="116" height="21"/>
@@ -145,7 +145,7 @@
                                                 <rect key="frame" x="317" y="544" width="185" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="if9-CI-tmf">
                                                 <rect key="frame" x="345" y="582" width="34" height="30"/>
@@ -185,11 +185,11 @@
                         <outlet property="ageTextField" destination="u6V-us-JTA" id="t0F-cD-BB3"/>
                         <outlet property="currentTownTextField" destination="JoL-Od-qyl" id="BZf-wg-Do5"/>
                         <outlet property="educationTextField" destination="VlR-Bm-qiV" id="AdF-r9-75c"/>
-                        <outlet property="emailTextField" destination="gHj-hV-e3t" id="p9j-vu-GIt"/>
+                        <outlet property="emailTextField" destination="eJE-3B-Bw2" id="SSz-wW-osJ"/>
                         <outlet property="hobbiesTextField" destination="3Wc-Iy-bku" id="6wg-Gw-rd2"/>
                         <outlet property="homeTownTextField" destination="pN3-ZV-X8A" id="Cjp-wd-rhK"/>
                         <outlet property="nameTextField" destination="abE-Ds-F5g" id="Atr-oP-l0C"/>
-                        <outlet property="phoneNumberTextField" destination="eJE-3B-Bw2" id="64A-kH-H2p"/>
+                        <outlet property="phoneNumberTextField" destination="gHj-hV-e3t" id="sBt-6G-KVu"/>
                         <outlet property="scrollview" destination="SWq-qT-h3C" id="lpM-k8-n2t"/>
                         <outlet property="workTextField" destination="jRq-3A-JSb" id="4ed-xz-nCt"/>
                     </connections>
@@ -356,7 +356,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getPersonContact:" destination="QUy-BD-bpt" eventType="touchUpInside" id="aco-Iq-eNc"/>
+                                    <action selector="showPicker:" destination="QUy-BD-bpt" eventType="touchUpInside" id="ZHk-Yp-mLo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rNe-iX-XlO">
@@ -373,15 +373,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BNd-7a-rWV">
-                                <rect key="frame" x="137" y="160" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Alz-O2-w41">
+                                <rect key="frame" x="137" y="212" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="findPeople:" destination="QUy-BD-bpt" eventType="touchUpInside" id="JEH-n3-NIU"/>
-                                    <segue destination="kix-gs-8Iq" kind="push" identifier="transitionToFacial" id="vuy-QY-IDn"/>
+                                    <segue destination="j5S-CZ-q3D" kind="push" id="6qJ-S8-gnw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -394,24 +393,25 @@
             <point key="canvasLocation" x="-1383" y="290"/>
         </scene>
         <!--Facial View Controller-->
-        <scene sceneID="Q5y-dP-wnQ">
+        <scene sceneID="686-d4-NHf">
             <objects>
-                <viewController id="kix-gs-8Iq" customClass="FacialViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="U1I-Kb-5cR">
+                <viewController id="j5S-CZ-q3D" customClass="FacialViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BUl-ZK-Iqv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OHm-dN-NCt"/>
+                    <navigationItem key="navigationItem" id="swr-aa-ePb"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eA5-Dz-Q6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBD-8o-DQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-947" y="328"/>
+            <point key="canvasLocation" x="-928" y="326"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
             <objects>
                 <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WTK-Zb-NXh"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -428,6 +428,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1926" y="-10"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rij-No-9bg">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="IUQ-0D-xMV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hrV-30-F3p">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8YX-ce-x5E" kind="relationship" relationship="rootViewController" id="1Fe-Bz-3UK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gb0-CJ-WWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2384" y="-10"/>
         </scene>
     </scenes>
     <resources>

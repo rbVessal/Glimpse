@@ -176,9 +176,12 @@
 
 // MultiPeer Connectivity
 
+// Set up MultiPeer
+//NSString *hobbies = [[NSUserDefaults standardUserDefaults]objectForKey:@"Hobbies"];
+
 // Prepare to transfer data to another viewport
 - (void) personsDataGathered {    
-    [self performSegueWithIdentifier: @"transitionToFacial" sender: self];
+    //[self performSegueWithIdentifier: @"transitionToFacial" sender: self];
 }
 
 // Seque is being performed
@@ -194,8 +197,7 @@
         controller.personsWork = self.personsWork;
         controller.personsHobbies = self.personsHobbies;
         controller.personsPhone = self.personsPhone;
-        controller.personsEmail = self.personsEmail;
-        
+        controller.personsEmail = self.personsEmail;        
     }
 }
 

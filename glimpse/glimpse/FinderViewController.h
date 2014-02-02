@@ -17,7 +17,8 @@
 
 - (IBAction)findPeople:(id)sender;
 @property (nonatomic, weak) IBOutlet UIButton * finderButton;
--(IBAction)showPicker:(id)sender;
+
+-(IBAction)getPersonContact:(id)sender;
 
 // Persons Data
 

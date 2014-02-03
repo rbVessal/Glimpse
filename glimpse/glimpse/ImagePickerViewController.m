@@ -70,12 +70,9 @@
     
 }
 
-// return to profile page
--(IBAction) dismissView:(id) sender
+-(IBAction)dismissView:(id)sender
 {
     [self dismissModalViewControllerAnimated:YES];
-    //ProfileViewController.view.
-
 }
 
 

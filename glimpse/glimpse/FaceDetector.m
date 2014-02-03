@@ -12,6 +12,8 @@
 #import <AssertMacros.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
+#define OFFSET 250
+
 static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 @interface FaceDetector ()
 
@@ -286,7 +288,7 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 			[self.previewLayer addSublayer:featureLayer];
 			featureLayer = nil;
 		}
-        faceRect.origin.y -= 250;
+        faceRect.origin.y -= OFFSET;
 		[featureLayer setFrame:faceRect];
 		
 		switch (orientation) {

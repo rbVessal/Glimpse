@@ -265,6 +265,8 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 		else
 			faceRect = CGRectOffset(faceRect, previewBox.origin.x, previewBox.origin.y);
 		
+        
+        
 		CALayer *featureLayer = nil;
 		
 		// re-use an existing layer if possible
@@ -284,6 +286,7 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 			[self.previewLayer addSublayer:featureLayer];
 			featureLayer = nil;
 		}
+        faceRect.origin.y -= 250;
 		[featureLayer setFrame:faceRect];
 		
 		switch (orientation) {

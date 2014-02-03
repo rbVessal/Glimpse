@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="IUQ-0D-xMV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="IUQ-0D-xMV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--Profile View Controller - First-->
@@ -317,14 +317,11 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Alz-O2-w41">
-                                <rect key="frame" x="137" y="212" width="46" height="30"/>
+                                <rect key="frame" x="87" y="139" width="146" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Discover">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="j5S-CZ-q3D" kind="push" id="6qJ-S8-gnw"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -332,12 +329,15 @@
                     <tabBarItem key="tabBarItem" systemItem="search" id="Z7h-1E-pvt"/>
                     <navigationItem key="navigationItem" title="Title" id="Rsn-bQ-PZX"/>
                     <connections>
+                        <outlet property="finderButton" destination="Alz-O2-w41" id="fe0-Wr-uoq"/>
                         <outlet property="navigationItem" destination="Rsn-bQ-PZX" id="OSR-qM-tRp"/>
+                        <segue destination="j5S-CZ-q3D" kind="push" identifier="transitionToFacial" id="Fd4-3N-15o"/>
+                        <segue destination="CZ4-MO-1fc" kind="modal" identifier="GetProfile" id="ra5-Ro-WUm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1383" y="290"/>
+            <point key="canvasLocation" x="-1383" y="292"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="EbQ-fT-03R">
@@ -465,7 +465,6 @@
         <!--Navigation Controller-->
         <scene sceneID="rij-No-9bg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gb0-CJ-WWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="IUQ-0D-xMV" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hrV-30-F3p">
                         <autoresizingMask key="autoresizingMask"/>
@@ -474,6 +473,7 @@
                         <segue destination="8YX-ce-x5E" kind="relationship" relationship="rootViewController" id="1Fe-Bz-3UK"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gb0-CJ-WWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2384" y="-10"/>
         </scene>
@@ -490,4 +490,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ra5-Ro-WUm"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -66,7 +66,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 	[picker dismissModalViewControllerAnimated:YES];
 	self.imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    [[NSUserDefaults standardUserDefaults]setObject:UIImagePNGRepresentation(self.imageView.image) forKey:@"Profile Picture"];
+    [[NSUserDefaults standardUserDefaults]setObject:UIImageJPEGRepresentation(self.imageView.image, 100.0f) forKey:@"Profile Picture"];
     
 }
 

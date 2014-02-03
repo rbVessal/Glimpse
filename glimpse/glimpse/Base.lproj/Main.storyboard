@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1383" y="-346"/>
+            <point key="canvasLocation" x="-1353" y="-346"/>
         </scene>
         <!--Image Picker View Controller-->
         <scene sceneID="ghZ-lB-urJ">
@@ -366,17 +366,19 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Alz-O2-w41">
                                 <rect key="frame" x="137" y="212" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Find">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="j5S-CZ-q3D" kind="push" id="6qJ-S8-gnw"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="Z7h-1E-pvt"/>
+                    <connections>
+                        <outlet property="finderButton" destination="Alz-O2-w41" id="RlZ-E2-mYz"/>
+                        <segue destination="CZ4-MO-1fc" kind="modal" identifier="GetProfile" id="w1h-4l-mjt"/>
+                        <segue destination="j5S-CZ-q3D" kind="push" identifier="transitionToFacial" id="WXZ-Yj-oby"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
@@ -478,4 +480,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="w1h-4l-mjt"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -8,11 +8,15 @@
 
 #import "FinderViewController.h"
 #import "FacialViewController.h"
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-@interface FinderViewController ()
-{
-    
-}
+@interface FinderViewController ()<MCBrowserViewControllerDelegate, MCSessionDelegate>
+
+// MultiPeer Connectivity
+@property (nonatomic, strong) MCBrowserViewController *browserVC;
+@property (nonatomic, strong) MCAdvertiserAssistant *advertiser;
+@property (nonatomic, strong) MCSession *mySession;
+@property (nonatomic, strong) MCPeerID *myPeerID;
 
 @property (nonatomic, strong) NSString * personsImage;
 @property (nonatomic, strong) NSString * personsName;
@@ -25,28 +29,263 @@
 @property (nonatomic, strong) NSString * personsPhone;
 @property (nonatomic, strong) NSString * personsEmail;
 
+@property (nonatomic, strong) UIButton *browserButton;
+
 @end
 
 @implementation FinderViewController
+
+int dataRecieved;
+int dataSent;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self setUpUI];
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    dataRecieved = 0;
+    dataSent = 0;
+    
+    // Data exist in Profile (Quick Check)
+    if(![[[NSUserDefaults standardUserDefaults]objectForKey:@"Name"] isEqualToString:@""])
+    {
+        [self setUpMultipeer];
+    }
+    
+    // OtherWise force to goto get Profile
+    else
+    {
+        [self performSegueWithIdentifier: @"GetProfile" sender: self];
+    }
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void) setUpUI{
+    //  Setup the browse button
+   
+    [self.finderButton addTarget:self action:@selector(showBrowserVC) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) setUpMultipeer{
+    
+    //  Setup peer ID
+    NSString * idName = [[[[NSUserDefaults standardUserDefaults]objectForKey:@"Name"] stringByAppendingString: @" - "]
+                         stringByAppendingString:[[NSUserDefaults standardUserDefaults]objectForKey:@"Work"]];
+    // Cap at 63
+    if( idName.length > 63 )
+    {
+        idName = [idName substringToIndex:idName.length - (idName.length - 63)];
+    }
+    
+    self.myPeerID = [[MCPeerID alloc] initWithDisplayName: idName] /*[UIDevice currentDevice].name]*/;
+    
+    //  Setup session
+    self.mySession = [[MCSession alloc] initWithPeer:self.myPeerID];
+    self.mySession.delegate = self;
+    
+    //  Setup BrowserViewController
+    self.browserVC = [[MCBrowserViewController alloc] initWithServiceType:@"chat" session:self.mySession];
+    self.browserVC.delegate = self;
+    
+    //  Setup Advertiser
+    self.advertiser = [[MCAdvertiserAssistant alloc] initWithServiceType:@"chat" discoveryInfo:nil session:self.mySession];
+    [self.advertiser start];
+}
+
+- (void) showBrowserVC{
+    [self presentViewController:self.browserVC animated:YES completion:nil];
+}
+
+- (void) dismissBrowserVC{
+    [self.browserVC dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void) sendMessages
+{
+    for( int i = 0; i < 9; ++i )
+    {
+        [self sendText];
+    }
+}
+
+- (void) sendText{
+    //  Retrieve text from chat box and clear chat box
+    NSString *message;
+    NSString *key;
+    
+    switch( dataSent )
+    {
+        case /* Name */ 0:
+        {
+            key = @"Name";
+            break;
+        }
+        case /* Age */ 1:
+        {
+            key = @"Age";
+            break;
+        }
+        case /* HomeTown */ 2:
+        {
+            key = @"HomeTown";
+            break;
+        }
+        case /* Current */ 3:
+        {
+            key = @"CurrentTown";
+            break;
+        }
+        case /* Education */ 4:
+        {
+            key = @"Education";
+            break;
+        }
+        case /* Work */ 5:
+        {
+            key = @"Work";
+            break;
+        }
+        case /* Hobbies */ 6:
+        {
+            key = @"Hobbies";
+            break;
+        }
+        case /* Phone */ 7:
+        {
+            key = @"Phone Number";
+            break;
+        }
+        case /* Email */ 8:
+        {
+            key = @"Email";
+            if( dataRecieved >= 8 )
+            {
+                [self personsDataGathered];
+            }
+            break;
+        }
+        case /* Image */ 9:
+        {
+            
+            break;
+        }
+    }
+    
+    ++dataSent;
+    
+    message = [[NSUserDefaults standardUserDefaults]objectForKey:key];
+    
+    NSLog(@"Sent - %@", message);
+    
+    //  Convert text to NSData
+    NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+    
+    //  Send data to connected peers
+    NSError *error;
+    [self.mySession sendData:data toPeers:[self.mySession connectedPeers] withMode:MCSessionSendDataUnreliable error:&error];
+}
+
+- (void) receiveMessage: (NSString *) message fromPeer: (MCPeerID *) peer{
+    
+    switch( dataRecieved )
+    {
+        case /* Name */ 0:
+        {
+            self.personsName = message;
+            break;
+        }
+        case /* Age */ 1:
+        {
+            self.personsAge = message;
+            break;
+        }
+        case /* HomeTown */ 2:
+        {
+            self.personsHomeTown = message;
+            break;
+        }
+        case /* Current */ 3:
+        {
+            self.personsCurrent = message;
+            break;
+        }
+        case /* Education */ 4:
+        {
+            self.personsEducation = message;
+            break;
+        }
+        case /* Work */ 5:
+        {
+            self.personsWork = message;
+            break;
+        }
+        case /* Hobbies */ 6:
+        {
+            self.personsHobbies = message;
+            break;
+        }
+        case /* Phone */ 7:
+        {
+            self.personsPhone = message;
+            break;
+        }
+        case /* Email */ 8:
+        {
+            self.personsEmail = message;
+            // Done
+            
+            if( dataSent >= 8 )
+            {
+                [self personsDataGathered];
+            }
+            else
+            {
+                [self sendMessages];
+            }
+            break;
+        }
+        case /* Image */ 9:
+        {
+            
+            break;
+        }
+    }
+    ++dataRecieved;
+    
+    NSLog(@"Recieved - %@", message);
+    
+}
+
+#pragma marks MCBrowserViewControllerDelegate
+
+// Notifies the delegate, when the user taps the done button
+- (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController{
+    [self dismissBrowserVC];
+    [self sendMessages];
+}
+
+// Notifies delegate that the user taps the cancel button.
+- (void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController{
+    [self dismissBrowserVC];
 }
 
 
-// MultiPeer Connectivity
-
-// Set up MultiPeer
-//NSString *hobbies = [[NSUserDefaults standardUserDefaults]objectForKey:@"Hobbies"];
 
 // Prepare to transfer data to another viewport
-- (void) personsDataGathered {    
-    //[self performSegueWithIdentifier: @"transitionToFacial" sender: self];
+- (void) personsDataGathered {
+    [self performSegueWithIdentifier: @"transitionToFacial" sender: self];
 }
 
-// Seque is being performed
+// Seque is being performed - Transfer all data
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"transitionToFacial"]){
         FacialViewController *controller = (FacialViewController *)segue.destinationViewController;
@@ -59,20 +298,43 @@
         controller.personsWork = self.personsWork;
         controller.personsHobbies = self.personsHobbies;
         controller.personsPhone = self.personsPhone;
-        controller.personsEmail = self.personsEmail;        
+        controller.personsEmail = self.personsEmail;
     }
 }
 
-- (IBAction)findPeople:(id)sender {
-    
-    self.personsName = @"NameP";
-    [self personsDataGathered];
+
+
+
+
+#pragma marks MCSessionDelegate
+// Remote peer changed state
+- (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state{
     
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+// Received data from remote peer
+- (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID{
+    //  Decode data back to NSString
+    NSString *message = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+    //  append message to text box:
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self receiveMessage:message fromPeer:peerID];
+    });
+}
+
+// Received a byte stream from remote peer
+- (void)session:(MCSession *)session didReceiveStream:(NSInputStream *)stream withName:(NSString *)streamName fromPeer:(MCPeerID *)peerID{
+    
+}
+
+// Start receiving a resource from remote peer
+- (void)session:(MCSession *)session didStartReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID withProgress:(NSProgress *)progress{
+    
+}
+
+// Finished receiving a resource from remote peer and saved the content in a temporary location - the app is responsible for moving the file to a permanent location within its sandbox
+- (void)session:(MCSession *)session didFinishReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID atURL:(NSURL *)localURL withError:(NSError *)error{
+    
 }
 @end

@@ -24,5 +24,6 @@
 @property (nonatomic, weak) IBOutlet UIButton * confirmBtn;
 
 -(IBAction) getPhoto:(id) sender;
+-(IBAction)dismissView:(id)sender;
 
 @end

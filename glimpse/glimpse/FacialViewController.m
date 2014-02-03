@@ -30,6 +30,7 @@
     self.animator = animator;
     //Create the facedetector that enables the video tracking session
     _faceDetector = [[FaceDetector alloc]init];
+    _faceDetector.delegate = self;
     _faceDetector.previewView = self.view;
     [_faceDetector setupVideoFaceDetection];
 }
@@ -37,6 +38,12 @@
 -(IBAction)getPersonContact:(id)sender
 {
     [_contractGrabber getPersonContact];
+}
+
+#pragma mark - FaceDetector Protocol
+-(void)moveContactsButton:(CGRect)markerFrame
+{
+    [self.getContactsBtn setFrame:markerFrame];
 }
 
 #pragma mark - ContactGrabber Protocol
@@ -60,7 +67,10 @@
 
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:^
+    {
+        [self.navigationController popViewControllerAnimated:NO];
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated

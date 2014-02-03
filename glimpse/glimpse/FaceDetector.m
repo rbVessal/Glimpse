@@ -16,6 +16,9 @@
 
 static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 @interface FaceDetector ()
+{
+    CGRect markerRect;
+}
 
 @property (nonatomic) BOOL isUsingFrontFacingCamera;
 @property (nonatomic, strong) AVCaptureVideoDataOutput *videoDataOutput;
@@ -290,6 +293,9 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 		}
         faceRect.origin.y -= OFFSET;
 		[featureLayer setFrame:faceRect];
+        markerRect = faceRect;
+        [self.delegate moveContactsButton:markerRect];
+
 		
 		switch (orientation) {
 			case UIDeviceOrientationPortrait:
@@ -401,12 +407,27 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 
 -(void)setupVideoFaceDetection
 {
+    //Assign a tap guesture recognizer to the view to be able to dismiss
+    //the keyboard when the user taps outside of the textfield
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(getPersonsContact:)];
+    [self.previewView addGestureRecognizer:tap];
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     
 	[self setupAVCapture];
 	self.borderImage = [UIImage imageNamed:@"border"];
 	NSDictionary *detectorOptions = [[NSDictionary alloc] initWithObjectsAndKeys:CIDetectorAccuracyLow, CIDetectorAccuracy, nil];
 	self.faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:detectorOptions];
+}
+
+-(void)getPersonsContact:(UIGestureRecognizer*)tappedRecognizer
+{
+    CGPoint tappedLocation = [tappedRecognizer locationInView:self.previewView];
+    if(CGRectContainsPoint(markerRect, tappedLocation))
+    {
+        NSLog(@"Tapped on marker");
+    }
 }
 
 -(void)teardownVideoFaceDetection

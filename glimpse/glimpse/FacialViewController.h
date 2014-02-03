@@ -12,7 +12,7 @@
 #import "ContactGrabber.h"
 #import "FaceDetector.h"
 
-@interface FacialViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate, ContactGrabberDelegate>
+@interface FacialViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate, ContactGrabberDelegate, FaceDetectorProtocol>
 
 @property (nonatomic, strong) NSString * personsImage;
 @property (nonatomic, strong) NSString * personsAge;

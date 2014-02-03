@@ -10,9 +10,19 @@
 #import <Foundation/Foundation.h>
 #import <CoreImage/CoreImage.h>
 #import <AVFoundation/AVFoundation.h>
+@protocol FaceDetectorProtocol <NSObject>
+
+@required
+-(void)moveContactsButton:(CGRect)markerRect;
+@end
+
+
 @interface FaceDetector : NSObject <UIGestureRecognizerDelegate,AVCaptureVideoDataOutputSampleBufferDelegate>
 
 @property (weak, nonatomic) UIView *previewView;
+
+@property (nonatomic, weak) id <FaceDetectorProtocol> delegate;
+
 
 -(void)setupVideoFaceDetection;
 -(void)teardownVideoFaceDetection;

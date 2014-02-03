@@ -27,6 +27,7 @@
 
 -(IBAction)getPersonContact:(id)sender;
 
+//@property (nonatomic, weak) IBOutlet UINavigationItem *navigationItem;
 // UIKit Dynamics
 @property (nonatomic, weak) IBOutlet UIView *marker;
 @property (nonatomic, strong) UIDynamicAnimator *animator;

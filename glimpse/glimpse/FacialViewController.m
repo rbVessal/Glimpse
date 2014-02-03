@@ -21,6 +21,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.navigationItem.title = @"Finder";
     //Create the contract grabber that will get the person's contact
     _contractGrabber = [[ContactGrabber alloc]init];
     _contractGrabber.delegate = self;

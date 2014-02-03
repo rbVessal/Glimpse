@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TutorialContentViewController.h"
 
-@interface TutorialViewController : UIViewController
+@interface TutorialViewController : UIViewController <UIPageViewControllerDataSource>
+
 
 @end

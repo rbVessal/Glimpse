@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImagePickerViewController : UIViewController < UIImagePickerControllerDelegate, UINavigationControllerDelegate > {
+@interface ImagePickerViewController : UIViewController < UIImagePickerControllerDelegate, UINavigationControllerDelegate >
+{
 	UIImageView * imageView;
 	UIButton * choosePhotoBtn;
 	UIButton * takePhotoBtn;

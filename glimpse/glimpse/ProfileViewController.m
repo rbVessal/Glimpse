@@ -67,10 +67,15 @@
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+    
+    self.tabBarController.navigationItem.title = @"Profile";
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    //If the data exists, then fill in the profile with it
+    NSData *imageData = [[NSUserDefaults standardUserDefaults]objectForKey:@"Profile Picture"];
+    self.profileImage.image = [UIImage imageWithData:imageData];
     self.nameTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Name"];
     self.ageTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Age"];
     self.homeTownTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"HomeTown"];
@@ -80,6 +85,10 @@
     self.hobbiesTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Hobbies"];
     self.emailTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Email"];
     self.phoneNumberTextField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"Phone Number"];
+    
+    //Change the navigation title to the profile
+    self.tabBarController.navigationItem.title = @"Profile";
+
 }
 
 -(void)dismissKeyboard
@@ -162,6 +171,10 @@
     
     //Dismiss the keyboard
     [self dismissKeyboard];
+    
+    //Show confirmation of saved profile information
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Profile Saved" message:@"Your profile information was saved successfully." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

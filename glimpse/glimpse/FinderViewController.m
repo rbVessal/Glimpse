@@ -37,23 +37,28 @@
 
 int dataRecieved;
 int dataSent;
+bool done;
 
 - (void)viewDidLoad
 {
+    dataRecieved = 0;
+    dataSent = 0;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self setUpUI];
+    done = false;
 }
 
 -(void) viewDidAppear:(BOOL)animated
 {
-    dataRecieved = 0;
-    dataSent = 0;
-    
     // Data exist in Profile (Quick Check)
     if(![[[NSUserDefaults standardUserDefaults]objectForKey:@"Name"] isEqualToString:@""])
     {
-        [self setUpMultipeer];
+        if( !done )
+        {
+            [self setUpMultipeer];
+            done = TRUE;
+        }
     }
     
     // OtherWise force to goto get Profile
@@ -70,6 +75,8 @@ int dataSent;
 }
 
 - (void) setUpUI{
+    self.tabBarController.navigationItem.title = @"Lobby";
+
     //  Setup the browse button
    
     [self.finderButton addTarget:self action:@selector(showBrowserVC) forControlEvents:UIControlEventTouchUpInside];
@@ -114,6 +121,10 @@ int dataSent;
     for( int i = 0; i < 9; ++i )
     {
         [self sendText];
+    }
+    if( dataRecieved >= 9 )
+    {
+        [self personsDataGathered];
     }
 }
 
@@ -167,10 +178,6 @@ int dataSent;
         case /* Email */ 8:
         {
             key = @"Email";
-            if( dataRecieved >= 8 )
-            {
-                [self personsDataGathered];
-            }
             break;
         }
         case /* Image */ 9:
@@ -270,6 +277,7 @@ int dataSent;
 // Notifies the delegate, when the user taps the done button
 - (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController{
     [self dismissBrowserVC];
+    
     [self sendMessages];
 }
 
@@ -277,8 +285,6 @@ int dataSent;
 - (void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController{
     [self dismissBrowserVC];
 }
-
-
 
 // Prepare to transfer data to another viewport
 - (void) personsDataGathered {

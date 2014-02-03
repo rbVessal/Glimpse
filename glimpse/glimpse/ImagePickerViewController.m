@@ -17,7 +17,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
     }
     return self;
@@ -27,6 +28,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.navigationItem.title = @"Image Picker";
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.navigationItem.title = @"Image Picker";
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,13 +44,17 @@
 
 //@synthesize imageView,choosePhotoBtn, takePhotoBtn;
 
--(IBAction) getPhoto:(id) sender {
+-(IBAction) getPhoto:(id) sender
+{
 	UIImagePickerController * picker = [[UIImagePickerController alloc] init];
 	picker.delegate = self;
     
-	if((UIButton *) sender == self.choosePhotoBtn) {
+	if((UIButton *) sender == self.choosePhotoBtn)
+    {
 		picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-	} else {
+	}
+    else
+    {
 		picker.sourceType = UIImagePickerControllerSourceTypeCamera;
 	}
     
@@ -55,6 +66,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 	[picker dismissModalViewControllerAnimated:YES];
 	self.imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    [[NSUserDefaults standardUserDefaults]setObject:UIImagePNGRepresentation(self.imageView.image) forKey:@"Profile Picture"];
     
 }
 

@@ -9,6 +9,7 @@
 #import "FinderViewController.h"
 #import "FacialViewController.h"
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
+#import "APLPositionToBoundsMapping.h"
 
 @interface FinderViewController ()<MCBrowserViewControllerDelegate, MCSessionDelegate>
 
@@ -31,6 +32,9 @@
 
 @property (nonatomic, strong) UIButton *browserButton;
 
+@property (nonatomic, readwrite) CGRect button1Bounds;
+@property (nonatomic, strong) UIDynamicAnimator *animator;
+
 @end
 
 @implementation FinderViewController
@@ -47,6 +51,12 @@ bool done;
 	// Do any additional setup after loading the view, typically from a nib.
     [self setUpUI];
     done = false;
+    
+    self.button1Bounds = self.finderButton.bounds;
+    
+    // Force the button image to scale with its bounds.
+    self.finderButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
+    self.finderButton.contentVerticalAlignment = UIControlContentHorizontalAlignmentFill;
 }
 
 -(void) viewDidAppear:(BOOL)animated
@@ -343,4 +353,41 @@ bool done;
 - (void)session:(MCSession *)session didFinishReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID atURL:(NSURL *)localURL withError:(NSError *)error{
     
 }
+
+//| ----------------------------------------------------------------------------
+//  IBAction for tapping the button in this demo.
+//
+- (IBAction)buttonAction:(id)sender
+{
+    // Reset the buttons bounds to their initial state.  See the comment in
+    // -viewDidLoad.
+    self.finderButton.bounds = self.button1Bounds;
+    
+    // UIDynamicAnimator instances are relatively cheap to create.
+    UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    
+    // APLPositionToBoundsMapping maps the center of an id<ResizableDynamicItem>
+    // (UIDynamicItem with mutable bounds) to its bounds.  As dynamics modifies
+    // the center.x, the changes are forwarded to the bounds.size.width.
+    // Similarly, as dynamics modifies the center.y, the changes are forwarded
+    // to bounds.size.height.
+    APLPositionToBoundsMapping *buttonBoundsDynamicItem = [[APLPositionToBoundsMapping alloc] initWithTarget:sender];
+    
+    // Create an attachment between the buttonBoundsDynamicItem and the initial
+    // value of the button's bounds.
+    UIAttachmentBehavior *attachmentBehavior = [[UIAttachmentBehavior alloc] initWithItem:buttonBoundsDynamicItem attachedToAnchor:buttonBoundsDynamicItem.center];
+    [attachmentBehavior setFrequency:2.0];
+    [attachmentBehavior setDamping:0.3];
+    [animator addBehavior:attachmentBehavior];
+    
+    UIPushBehavior *pushBehavior = [[UIPushBehavior alloc] initWithItems:@[buttonBoundsDynamicItem] mode:UIPushBehaviorModeInstantaneous];
+    pushBehavior.angle = M_PI_4;
+    pushBehavior.magnitude = 15.0;
+    [animator addBehavior:pushBehavior];
+    
+    [pushBehavior setActive:TRUE];
+    
+    self.animator = animator;
+}
+
 @end

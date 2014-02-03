@@ -19,7 +19,7 @@
 
 @property (nonatomic, weak) id <ContactGrabberDelegate> delegate;
 
-
+-(id)initWithDictionary:(NSMutableDictionary*)dictionary;
 - (void)getPersonContact;
 
 

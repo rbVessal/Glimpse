@@ -22,7 +22,8 @@
 @property (weak, nonatomic) UIView *previewView;
 
 @property (nonatomic, weak) id <FaceDetectorProtocol> delegate;
-
+@property (strong, nonatomic) NSString *fullName;
+@property (strong, nonatomic) NSString *jobTitle;
 
 -(void)setupVideoFaceDetection;
 -(void)teardownVideoFaceDetection;

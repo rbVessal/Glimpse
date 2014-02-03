@@ -293,7 +293,8 @@ bool done;
 
 // Seque is being performed - Transfer all data
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"transitionToFacial"]){
+    if([segue.identifier isEqualToString:@"transitionToFacial"])
+    {
         FacialViewController *controller = (FacialViewController *)segue.destinationViewController;
         controller.personsImage = self.personsImage;
         controller.personsName = self.personsName;

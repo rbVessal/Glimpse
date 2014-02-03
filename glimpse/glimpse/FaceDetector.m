@@ -68,20 +68,9 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 	
     AVCaptureDevicePosition desiredPosition = AVCaptureDevicePositionFront;
 	
-    // find the front facing camera
-	for (AVCaptureDevice *d in [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo]) {
-		if ([d position] == desiredPosition) {
-			device = d;
-            self.isUsingFrontFacingCamera = YES;
-			break;
-		}
-	}
-    // fall back to the default camera.
-    if( nil == device )
-    {
-        self.isUsingFrontFacingCamera = NO;
-        device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    }
+    self.isUsingFrontFacingCamera = YES;
+    device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
     
     // get the input device
     AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
@@ -283,6 +272,7 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 			}
 		}
 		
+        
 		// create a new one if necessary
 		if ( !featureLayer ) {
 			featureLayer = [[CALayer alloc]init];
@@ -291,9 +281,35 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 			[self.previewLayer addSublayer:featureLayer];
 			featureLayer = nil;
 		}
+        
         faceRect.origin.y -= OFFSET;
 		[featureLayer setFrame:faceRect];
         markerRect = faceRect;
+        CATextLayer *textLayer = nil;
+        for(int i = 0; i < sublayers.count; i++)
+        {
+            CALayer *generalLayer = [sublayers objectAtIndex:i];
+            if([generalLayer.name isEqualToString:@"PersonInfoTextLayer"])
+            {
+                textLayer = (CATextLayer*)generalLayer;
+            }
+        }
+        if(textLayer == nil)
+        {
+            textLayer = [[CATextLayer alloc]init];
+            [textLayer setFont:@"Helvetica"];
+            [textLayer setName:@"PersonInfoTextLayer"];
+            [textLayer setFontSize:15];
+            [textLayer setString:[NSString stringWithFormat:@"%@\n%@", self.fullName, self.jobTitle]];
+            [textLayer setAlignmentMode:kCAAlignmentCenter];
+            [textLayer setForegroundColor:[[UIColor blackColor]CGColor]];
+            [textLayer setFrame:CGRectMake(markerRect.origin.x, markerRect.origin.y + 200, markerRect.size.width, markerRect.size.height)];
+            [self.previewLayer addSublayer:textLayer];
+        }
+        else
+        {
+            [textLayer setFrame:markerRect];
+        }
         [self.delegate moveContactsButton:markerRect];
 
 		

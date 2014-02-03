@@ -9,15 +9,19 @@
 #import "ContactGrabber.h"
 
 @interface ContactGrabber ()
+{
+    NSMutableDictionary *_contactDictionary;
+}
 @property (nonatomic, assign) ABAddressBookRef addressBook;
 
 @end
 
 @implementation ContactGrabber
 
--(id)init
+-(id)initWithDictionary:(NSMutableDictionary*)dictionary
 {
     self = [super init];
+    _contactDictionary = dictionary;
     return self;
 }
 
@@ -101,7 +105,7 @@
     ABRecordRef personContactToAdd = ABPersonCreate();
     
     //Get the name and get the first and last name by separating the string by space
-    NSString *fullName = [[NSUserDefaults standardUserDefaults]objectForKey:@"Name"];
+    NSString *fullName = [_contactDictionary objectForKey:@"Name"];
     if(fullName != nil)
     {
         NSArray *nameComponents = [fullName componentsSeparatedByString:@" "];
@@ -116,7 +120,7 @@
     }
     //// Adding Phone details
     // create a new phone --------------------
-    NSString *phoneNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"Phone Number"];
+    NSString *phoneNumber = [_contactDictionary objectForKey:@"Phone Number"];
     if(phoneNumber != nil)
     {
         ABMutableMultiValueRef multiPhone = ABMultiValueCreateMutable(kABMultiStringPropertyType);
@@ -126,14 +130,14 @@
         CFRelease(multiPhone);
     }
     
-    NSString *work = [[NSUserDefaults standardUserDefaults]objectForKey:@"Work"];
+    NSString *work = [_contactDictionary objectForKey:@"Work"];
     if(work != nil)
     {
         ABRecordSetValue(personContactToAdd, kABPersonJobTitleProperty, (__bridge CFTypeRef)(work), &error);
     }
     //// Adding email details
     // create new email-ref
-    NSString *email = [[NSUserDefaults standardUserDefaults]objectForKey:@"Email"];
+    NSString *email = [_contactDictionary objectForKey:@"Email"];
     if(email != nil)
     {
         ABMutableMultiValueRef multiEmail = ABMultiValueCreateMutable(kABMultiStringPropertyType);
@@ -144,14 +148,17 @@
     }
     //// adding address details
     // create address object
-    NSString *currentTown = [[NSUserDefaults standardUserDefaults]objectForKey:@"CurrentTown"];
+    NSString *currentTown = [_contactDictionary objectForKey:@"CurrentTown"];
     if(currentTown != nil)
     {
         NSArray *currentTownComponents = [currentTown componentsSeparatedByString:@","];
         ABMutableMultiValueRef multiAddress = ABMultiValueCreateMutable(kABMultiDictionaryPropertyType);
         NSMutableDictionary *addressDictionary = [[NSMutableDictionary alloc] init];
         [addressDictionary setObject:[currentTownComponents objectAtIndex:0] forKey:(NSString *)kABPersonAddressCityKey];
-        [addressDictionary setObject:[currentTownComponents objectAtIndex:1] forKey:(NSString *)kABPersonAddressStateKey];
+        if (currentTownComponents.count > 1)
+        {
+            [addressDictionary setObject:[currentTownComponents objectAtIndex:1] forKey:(NSString *)kABPersonAddressStateKey];
+        }
         // retain the dictionary
         CFTypeRef ctr = CFBridgingRetain(addressDictionary);
         // copy all key-values from ctr to Address object
@@ -168,9 +175,9 @@
     //    NSDate *bdate=[formatter dateFromString:@"06.12.1991"]; // 10.12 is your b'date.
     //    //don't set year in address book (yyyy=1604)
     //    ABRecordSetValue(personContactToAdd, kABPersonBirthdayProperty, (__bridge CFTypeRef)(bdate), &error);
-    NSString *hobbies = [[NSUserDefaults standardUserDefaults]objectForKey:@"Hobbies"];
-    NSString *education = [[NSUserDefaults standardUserDefaults]objectForKey:@"Education"];
-    NSString *age = [[NSUserDefaults standardUserDefaults]objectForKey:@"Age"];
+    NSString *hobbies = [_contactDictionary objectForKey:@"Hobbies"];
+    NSString *education = [_contactDictionary objectForKey:@"Education"];
+    NSString *age = [_contactDictionary objectForKey:@"Age"];
     if(hobbies != nil && education != nil && age != nil)
     {
         ABRecordSetValue(personContactToAdd, kABPersonNoteProperty, (__bridge CFTypeRef)([NSString stringWithFormat:@"Hobbies: %@\n Education: %@\nAge: %@", hobbies, education, age]), &error);

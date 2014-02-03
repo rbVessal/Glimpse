@@ -10,6 +10,7 @@
 
 @interface FacialViewController ()
 {
+    NSMutableDictionary *_contactDictionary;
     ContactGrabber *_contractGrabber;
     FaceDetector *_faceDetector;
 }
@@ -22,14 +23,28 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationItem.title = @"Finder";
+    _contactDictionary = [[NSMutableDictionary alloc]init];
+    [_contactDictionary setObject:self.personsName forKey:@"Name"];
+    [_contactDictionary setObject:self.personsPhone forKey:@"Phone Number"];
+    [_contactDictionary setObject:self.personsHomeTown forKey:@"HomeTown"];
+    [_contactDictionary setObject:self.personsHobbies forKey:@"Hobbies"];
+    [_contactDictionary setObject:self.personsEducation forKey:@"Education"];
+    [_contactDictionary setObject:self.personsAge forKey:@"Age"];
+    [_contactDictionary setObject:self.personsWork forKey:@"Work"];
+    [_contactDictionary setObject:self.personsEmail forKey:@"Email"];
+    [_contactDictionary setObject:self.personsCurrent forKey:@"CurrentTown"];
+
     //Create the contract grabber that will get the person's contact
-    _contractGrabber = [[ContactGrabber alloc]init];
+    _contractGrabber = [[ContactGrabber alloc]initWithDictionary:_contactDictionary];
     _contractGrabber.delegate = self;
+    
     
     UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     self.animator = animator;
     //Create the facedetector that enables the video tracking session
     _faceDetector = [[FaceDetector alloc]init];
+    _faceDetector.fullName = self.personsName;
+    _faceDetector.jobTitle = self.personsWork;
     _faceDetector.delegate = self;
     _faceDetector.previewView = self.view;
     [_faceDetector setupVideoFaceDetection];

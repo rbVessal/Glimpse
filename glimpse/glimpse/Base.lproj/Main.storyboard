@@ -343,7 +343,6 @@
                         <outlet property="finderButton" destination="Alz-O2-w41" id="fe0-Wr-uoq"/>
                         <outlet property="navigationItem" destination="Rsn-bQ-PZX" id="OSR-qM-tRp"/>
                         <segue destination="j5S-CZ-q3D" kind="push" identifier="transitionToFacial" id="Fd4-3N-15o"/>
-                        <segue destination="CZ4-MO-1fc" kind="modal" identifier="GetProfile" id="ra5-Ro-WUm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
@@ -507,7 +506,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="ra5-Ro-WUm"/>
-    </inferredMetricsTieBreakers>
 </document>

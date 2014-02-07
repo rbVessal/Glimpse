@@ -12,7 +12,7 @@
 #import <AssertMacros.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
-#define OFFSET 250
+#define OFFSET 95
 
 static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 @interface FaceDetector ()
@@ -65,9 +65,7 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
     
     // Select a video device, make an input
 	AVCaptureDevice *device;
-	
-    AVCaptureDevicePosition desiredPosition = AVCaptureDevicePositionFront;
-	
+		
     self.isUsingFrontFacingCamera = YES;
     device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     

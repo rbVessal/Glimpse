@@ -49,16 +49,23 @@
 	UIImagePickerController * picker = [[UIImagePickerController alloc] init];
 	picker.delegate = self;
     
-	if((UIButton *) sender == self.choosePhotoBtn)
+	if((UIButton *) sender == self.choosePhotoBtn && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum])
     {
 		picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        [self presentModalViewController:picker animated:YES];
+	}
+    else if((UIButton*)sender == self.takePhotoBtn && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+		picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentModalViewController:picker animated:YES];
 	}
     else
     {
-		picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-	}
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Camera Not Supported" message:@"Camera is not supported on this device.  Please try using a newer generation device that supports this function" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
     
-	[self presentModalViewController:picker animated:YES];
+	
     //[self.confirmBtn setEnabled:true];
     
 }

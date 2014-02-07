@@ -35,6 +35,8 @@
 @property (nonatomic, readwrite) CGRect button1Bounds;
 @property (nonatomic, strong) UIDynamicAnimator *animator;
 
+@property (nonatomic, strong) UITabBarController *tabBar;
+
 @end
 
 @implementation FinderViewController
@@ -62,7 +64,7 @@ bool done;
 -(void) viewDidAppear:(BOOL)animated
 {
     // Data exist in Profile (Quick Check)
-    if(![[[NSUserDefaults standardUserDefaults]objectForKey:@"Name"] isEqualToString:@""])
+    if([[NSUserDefaults standardUserDefaults]objectForKey:@"Name"] != nil )
     {
         if( !done )
         {
@@ -74,7 +76,9 @@ bool done;
     // OtherWise force to goto get Profile
     else
     {
-        [self performSegueWithIdentifier: @"GetProfile" sender: self];
+        //Show confirmation of saved profile information
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Profile Incomplete" message:@"Please fill out your profile completely before proceeding." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
     }
 }
 

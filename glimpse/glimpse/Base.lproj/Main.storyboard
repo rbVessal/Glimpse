@@ -177,7 +177,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="WOH-cT-gzj"/>
+                    <tabBarItem key="tabBarItem" image="profile_icon.png" id="WOH-cT-gzj"/>
                     <navigationItem key="navigationItem" title="Profile" id="Qr6-E9-FBL"/>
                     <connections>
                         <outlet property="ageTextField" destination="u6V-us-JTA" id="t0F-cD-BB3"/>
@@ -299,7 +299,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="vh4-gu-GG2"/>
+                    <tabBarItem key="tabBarItem" image="about_icon2.png" id="vh4-gu-GG2"/>
                     <navigationItem key="navigationItem" title="Title" id="fTD-oQ-9FK"/>
                     <connections>
                         <outlet property="navigationItem" destination="fTD-oQ-9FK" id="bhx-ve-OcH"/>
@@ -322,10 +322,11 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Alz-O2-w41">
-                                <rect key="frame" x="75" y="114" width="171" height="100"/>
+                                <rect key="frame" x="85" y="124" width="151" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96590909089999999" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Discover">
+                                <state key="normal" title="Discover" image="iTunesArtwork_80.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -335,7 +336,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="Z7h-1E-pvt"/>
+                    <tabBarItem key="tabBarItem" image="lobby_icon.png" id="Z7h-1E-pvt"/>
                     <navigationItem key="navigationItem" title="Title" id="Rsn-bQ-PZX"/>
                     <connections>
                         <outlet property="finderButton" destination="Alz-O2-w41" id="fe0-Wr-uoq"/>
@@ -357,7 +358,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="Ta4-Mf-2gT"/>
+                    <tabBarItem key="tabBarItem" image="tutorial_icon.png" id="Ta4-Mf-2gT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOD-Jx-KDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -493,7 +494,12 @@
     </scenes>
     <resources>
         <image name="Box1" width="100" height="100"/>
+        <image name="about_icon2.png" width="25" height="25"/>
         <image name="bg2.png" width="640" height="1136"/>
+        <image name="iTunesArtwork_80.png" width="80" height="80"/>
+        <image name="lobby_icon.png" width="25" height="25"/>
+        <image name="profile_icon.png" width="25" height="25"/>
+        <image name="tutorial_icon.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

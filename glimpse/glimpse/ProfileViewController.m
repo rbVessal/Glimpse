@@ -7,12 +7,13 @@
 //
 
 #import "ProfileViewController.h"
+#import "ContactGrabber.h"
 
 @interface ProfileViewController ()
 {
     CGSize _keyboardSize;
     CGPoint _keyboardOrigin;
-    NSMutableArray *_arrayOfTextFields;
+    NSMutableArray *_arrayOfTextFields;    
 }
 
 @end

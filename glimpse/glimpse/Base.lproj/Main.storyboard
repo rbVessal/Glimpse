@@ -177,7 +177,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="profile_icon.png" id="WOH-cT-gzj"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile_icon.png" id="WOH-cT-gzj"/>
                     <navigationItem key="navigationItem" title="Profile" id="Qr6-E9-FBL"/>
                     <connections>
                         <outlet property="ageTextField" destination="u6V-us-JTA" id="t0F-cD-BB3"/>
@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="-940" y="-346"/>
         </scene>
-        <!--About View Controller - Title-->
+        <!--About View Controller - About-->
         <scene sceneID="gnd-c8-LE3">
             <objects>
                 <viewController id="APk-0F-aEU" customClass="AboutViewController" sceneMemberID="viewController">
@@ -300,8 +300,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="about_icon2.png" id="vh4-gu-GG2"/>
-                    <navigationItem key="navigationItem" title="Title" id="fTD-oQ-9FK"/>
+                    <tabBarItem key="tabBarItem" title="About" image="about_icon2.png" id="vh4-gu-GG2"/>
+                    <navigationItem key="navigationItem" title="About" id="fTD-oQ-9FK"/>
                     <connections>
                         <outlet property="navigationItem" destination="fTD-oQ-9FK" id="bhx-ve-OcH"/>
                     </connections>
@@ -337,7 +337,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="lobby_icon.png" id="Z7h-1E-pvt"/>
+                    <tabBarItem key="tabBarItem" title="Lobby" image="lobby_icon.png" id="Z7h-1E-pvt"/>
                     <navigationItem key="navigationItem" title="Title" id="Rsn-bQ-PZX"/>
                     <connections>
                         <outlet property="finderButton" destination="Alz-O2-w41" id="fe0-Wr-uoq"/>
@@ -350,7 +350,7 @@
             </objects>
             <point key="canvasLocation" x="-1383" y="292"/>
         </scene>
-        <!--Tutorial View Controller-->
+        <!--Tutorial View Controller - Tutorial-->
         <scene sceneID="EbQ-fT-03R">
             <objects>
                 <viewController id="wbO-R6-BAk" customClass="TutorialViewController" sceneMemberID="viewController">
@@ -359,7 +359,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="tutorial_icon.png" id="Ta4-Mf-2gT"/>
+                    <tabBarItem key="tabBarItem" title="Tutorial" image="tutorial_icon.png" id="Ta4-Mf-2gT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOD-Jx-KDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

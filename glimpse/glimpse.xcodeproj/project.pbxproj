@@ -45,7 +45,6 @@
 		B3DB2C25189E4F750051E341 /* ContactGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DB2C24189E4F750051E341 /* ContactGrabber.m */; };
 		B3DFD08E189EA91A0019DAED /* FaceDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFD08D189EA91A0019DAED /* FaceDetector.m */; };
 		B3DFD090189EC0340019DAED /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFD08F189EC0340019DAED /* border.png */; };
-		B3DFD095189F00180019DAED /* TutorialContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFD094189F00180019DAED /* TutorialContentViewController.m */; };
 		B3DFD0A9189F64230019DAED /* about_icon2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFD0A4189F64230019DAED /* about_icon2@2x.png */; };
 		B3DFD0AA189F64230019DAED /* lobby_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFD0A5189F64230019DAED /* lobby_icon@2x.png */; };
 		B3DFD0AB189F64230019DAED /* marker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFD0A6189F64230019DAED /* marker@2x.png */; };
@@ -115,8 +114,6 @@
 		B3DFD08C189EA91A0019DAED /* FaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetector.h; sourceTree = "<group>"; };
 		B3DFD08D189EA91A0019DAED /* FaceDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetector.m; sourceTree = "<group>"; };
 		B3DFD08F189EC0340019DAED /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
-		B3DFD093189F00180019DAED /* TutorialContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialContentViewController.h; sourceTree = "<group>"; };
-		B3DFD094189F00180019DAED /* TutorialContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialContentViewController.m; sourceTree = "<group>"; };
 		B3DFD0A4189F64230019DAED /* about_icon2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_icon2@2x.png"; sourceTree = "<group>"; };
 		B3DFD0A5189F64230019DAED /* lobby_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lobby_icon@2x.png"; sourceTree = "<group>"; };
 		B3DFD0A6189F64230019DAED /* marker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker@2x.png"; sourceTree = "<group>"; };
@@ -273,8 +270,6 @@
 				3F32D7F9189B4C2300E109A8 /* ProfileViewController.m */,
 				3F32D7FB189B4C2300E109A8 /* FinderViewController.h */,
 				3F32D7FC189B4C2300E109A8 /* FinderViewController.m */,
-				B3DFD093189F00180019DAED /* TutorialContentViewController.h */,
-				B3DFD094189F00180019DAED /* TutorialContentViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -405,7 +400,6 @@
 				B3BFE22D189BFE0200695E82 /* AboutViewController.m in Sources */,
 				3F32D7F4189B4C2300E109A8 /* AppDelegate.m in Sources */,
 				3F32D7FA189B4C2300E109A8 /* ProfileViewController.m in Sources */,
-				B3DFD095189F00180019DAED /* TutorialContentViewController.m in Sources */,
 				3FE1CF32189DA1B400E8F55B /* ImagePickerViewController.m in Sources */,
 				3F32D7F0189B4C2300E109A8 /* main.m in Sources */,
 				3F810D6E189F362F00EC00AE /* APLPositionToBoundsMapping.m in Sources */,

@@ -38,7 +38,6 @@
 		3F810D6B189EDA0400EC00AE /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F810D6A189EDA0400EC00AE /* MultipeerConnectivity.framework */; };
 		3F810D6E189F362F00EC00AE /* APLPositionToBoundsMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F810D6D189F362F00EC00AE /* APLPositionToBoundsMapping.m */; };
 		3FE1CF32189DA1B400E8F55B /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1CF31189DA1B400E8F55B /* ImagePickerViewController.m */; };
-		3FE1CF35189DB0B700E8F55B /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1CF34189DB0B700E8F55B /* TutorialViewController.m */; };
 		3FFA7288189E538F00A1EB76 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFA7287189E538F00A1EB76 /* bg.png */; };
 		B3BFE229189BFC5D00695E82 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BFE227189BFC5D00695E82 /* AddressBook.framework */; };
 		B3BFE22A189BFC5D00695E82 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */; };
@@ -106,8 +105,6 @@
 		3F810D6D189F362F00EC00AE /* APLPositionToBoundsMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLPositionToBoundsMapping.m; sourceTree = "<group>"; };
 		3FE1CF30189DA1B400E8F55B /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
 		3FE1CF31189DA1B400E8F55B /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
-		3FE1CF33189DB0B700E8F55B /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
-		3FE1CF34189DB0B700E8F55B /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		3FFA7287189E538F00A1EB76 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		B3BFE227189BFC5D00695E82 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		B3BFE228189BFC5D00695E82 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -268,8 +265,6 @@
 				3F810D6D189F362F00EC00AE /* APLPositionToBoundsMapping.m */,
 				B3BFE22B189BFE0200695E82 /* AboutViewController.h */,
 				B3BFE22C189BFE0200695E82 /* AboutViewController.m */,
-				3FE1CF33189DB0B700E8F55B /* TutorialViewController.h */,
-				3FE1CF34189DB0B700E8F55B /* TutorialViewController.m */,
 				3FE1CF30189DA1B400E8F55B /* ImagePickerViewController.h */,
 				3FE1CF31189DA1B400E8F55B /* ImagePickerViewController.m */,
 				3F087C52189E4B4700A77BCF /* FacialViewController.h */,
@@ -404,7 +399,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F087C54189E4B4700A77BCF /* FacialViewController.m in Sources */,
-				3FE1CF35189DB0B700E8F55B /* TutorialViewController.m in Sources */,
 				B3DB2C25189E4F750051E341 /* ContactGrabber.m in Sources */,
 				3F32D7FD189B4C2300E109A8 /* FinderViewController.m in Sources */,
 				B3DFD08E189EA91A0019DAED /* FaceDetector.m in Sources */,
